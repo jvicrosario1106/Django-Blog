@@ -171,10 +171,14 @@ def addcat(request):
 
     return render(request, 'blogapp/addcat.html',content)
 
+
+@login_required(login_url = "login_user")
+@allowed(allowed_roles=["admin"])
 def deletecat(request,pk):
     category = Category.objects.get(id=pk)
     category.delete()
     return redirect("addcat")
+    
 
 @login_required(login_url = "login_user")
 @allowed(allowed_roles=["admin"])
