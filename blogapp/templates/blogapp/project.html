@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'blogapp/nav.html' %}
+
+    {% for post in posts %}
+
+    <h1>{{post.title}}</h1>
+    <img src="{{post.img.url}}" alt="" width=500>
+
+    {% endfor %}
+
+
+    {% if posts.has_previous %}
+    <a href="?page={{posts.previous_page_number}}">Previous</a>
+    {% endif %}
+
+
+    <p>{{posts.number}} of {{posts.paginator.num_pages}}</p>
+
+    {% if posts.has_next %}
+    <a href="?page={{posts.next_page_number}}">Next</a>
+    {% endif %}
+</body>
+</html>
