@@ -15,5 +15,13 @@
         {{form|crispy}}
         <button class="btn btn-primary">Create</button>
     </form>
+
+    <h3>List of Category</h3>
+    {% for cat in category %}
+
+    <p>{{cat}}</p>
+    <a href="{% url 'deletecat' cat.id %}" class='btn btn-danger'>Delete Category</a>
+    {% endfor %}
+
 </body>
 </html>

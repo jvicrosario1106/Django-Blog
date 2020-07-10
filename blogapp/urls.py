@@ -17,7 +17,7 @@ urlpatterns = [
     path('addcat/', views.addcat, name="addcat"),
     path('addauthor/', views.addauthor, name="addauthor"),
 
-
+    path('deletecat/<str:pk>/', views.deletecat, name= "deletecat"),
 
 
     path('login_user/', views.login_user, name="login_user"),

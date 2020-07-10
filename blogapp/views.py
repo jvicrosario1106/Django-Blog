@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import Post
+from .models import Post,Category
 from .forms import PostForm,CategoryForm,AuthorForm,UserForm
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
@@ -156,18 +156,25 @@ def addpost(request):
 @login_required(login_url = "login_user")
 @allowed(allowed_roles=["admin"])
 def addcat(request):
+    category = Category.objects.all()
     form = CategoryForm()
     if request.method == "POST":
         form = CategoryForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("home")
+            return redirect("addcat")
 
     content = {
-        "form":form
+        "form":form,
+        "category":category
     }
 
     return render(request, 'blogapp/addcat.html',content)
+
+def deletecat(request,pk):
+    category = Category.objects.get(id=pk)
+    category.delete()
+    return redirect("addcat")
 
 @login_required(login_url = "login_user")
 @allowed(allowed_roles=["admin"])
