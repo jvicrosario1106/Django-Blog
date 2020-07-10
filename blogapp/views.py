@@ -5,7 +5,9 @@ from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from .decorators import isauthentication,allowed
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
+from django.db.models import Q
 # Create your views here.
+
 
 @login_required(login_url = "login_user")
 def home(request):
@@ -19,6 +21,19 @@ def home(request):
     }
 
     return render(request, "blogapp/home.html",content)
+
+def results(request):
+    post = Post.objects.all()
+    query = request.GET.get('q')
+
+    if query:
+        post = post.filter(Q(title__icontains = query)|Q(desc__icontains = query))
+
+    content = {
+        'post':post
+    }
+
+    return render(request, 'blogapp/results.html', content)
 
 
 def projects(request):

@@ -8,6 +8,13 @@
 <body>
     {% include 'blogapp/nav.html' %}
 
+    <form action="{% url 'results' %}">
+        <input type="text" name="q" placeholder="Search Title">
+        <button class="btn btn-warning">Search</button>
+    </form>
+
+
+
     {% for post in posts %}
 
     <h1>{{post.title}}</h1>
