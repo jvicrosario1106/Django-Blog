@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'blogapp/nav.html' %}
+
+    <h1>{{posts.title}}</h1>
+    <img src="{{posts.img.url}}" alt="" width=600>
+
+    <h3>Comment{{comments.count|pluralize}} ({{comments.count}})</h3>
+    {% for c in comments%}
+
+    <p>{{c.user}}</p>
+    <p>{{c.body}}</p>
+    <p>{{c.comment_date|timesince}}</p>
+
+    {% endfor %}
+
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Comment</button>
+    </form>
+
+</body>
+
+</html>

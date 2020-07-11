@@ -9,15 +9,17 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('projects/', views.projects, name="projects"),
     path('results/', views.results, name="results"),
+    path('the_project/<str:pk>/', views.the_project, name="the_project"),
 
 
 
 
     path('addpost/', views.addpost, name="addpost"),
     path('addcat/', views.addcat, name="addcat"),
+    path('deletecat/<str:pk>/', views.deletecat, name= "deletecat"),
     path('addauthor/', views.addauthor, name="addauthor"),
 
-    path('deletecat/<str:pk>/', views.deletecat, name= "deletecat"),
+    
 
 
     path('login_user/', views.login_user, name="login_user"),

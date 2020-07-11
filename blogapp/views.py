@@ -1,11 +1,13 @@
 from django.shortcuts import render,redirect
 from .models import Post,Category
-from .forms import PostForm,CategoryForm,AuthorForm,UserForm
+from .forms import PostForm,CategoryForm,AuthorForm,UserForm,CommentForm
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from .decorators import isauthentication,allowed
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.db.models import Q
+from django.contrib.auth.models import User,Group
+from django.contrib import messages
 # Create your views here.
 
 
@@ -38,7 +40,7 @@ def results(request):
 
 def projects(request):
     post = Post.objects.all()
-    paginator = Paginator(post,1)
+    paginator = Paginator(post,2)
     page = request.GET.get('page')
 
     try:
@@ -54,13 +56,27 @@ def projects(request):
     }
     return render(request, 'blogapp/project.html',content)
 
+def the_project(request,pk):
+    posts = Post.objects.get(id=pk)
+    comments = posts.comment_set.all()
+    form = CommentForm()
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = posts
+            comment.user = request.user
+            comment.save()
+    else:
+        form = CommentForm()
 
+    content = {
+        'posts':posts,
+        'form':form,
+        'comments':comments
+    }
 
-
-
-
-
-
+    return render(request, 'blogapp/theproject.html', content)
 
 
 # THIS SECTION IS FOR AUTHENTICATION
@@ -77,7 +93,7 @@ def login_user(request):
             return redirect("home")
 
         else:
-            return redirect("login_user")
+            messages.error(request, "Wrong credentials. Please Try Again. You can exit me just click the 'x' in your right 😀")
 
     return render(request, "blogapp/login.html")
 
@@ -90,13 +106,16 @@ def logout_user(request):
 
 def register(request):
     form = UserForm()
-
+    messages.info(request, "Sign Up to comment the Blog post. You can exit me just click the 'x' in your right 😀")
     if request.method == "POST":
         form = UserForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            group = Group.objects.get(name="user")
+            user.groups.add(group)
             return redirect("login_user")
-
+        # else:
+        #      messages.info(request, "Create another unique credentials for your security")
     else:
         form = UserForm()
 
@@ -107,31 +126,6 @@ def register(request):
     return render(request, "blogapp/registration.html", content )
 
 #-----------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # THIS SECTION IS FOR ADMIN ONLY

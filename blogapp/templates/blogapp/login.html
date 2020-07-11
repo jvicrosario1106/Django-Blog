@@ -14,7 +14,19 @@
       <input type="password" name = "password" class="form-control" placeholder="Password">
     </div>
     
+    {% for message in messages %}
+
+    <div class="alert alert-danger alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Sorry </strong>{{message}}
+    </div>
+
+    {% endfor %}
+
     <button type="submit" class="btn btn-primary">Submit</button>
+
+    <a href="{% url 'register' %}">Sign-Up</a>
+  
 </form>
 
 {% endblock %}
