@@ -11,6 +11,7 @@
     <h1>{{posts.title}}</h1>
     <img src="{{posts.img.url}}" alt="" width=600>
 
+    <div class="comment-section">
     <h3>Comment{{comments.count|pluralize}} ({{comments.count}})</h3>
     {% for c in comments%}
 
@@ -19,14 +20,14 @@
     <p>{{c.comment_date|timesince}}</p>
 
     {% endfor %}
-
-
-
+    
     <form action="" method="POST">
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit" class="btn btn-primary">Comment</button>
     </form>
+
+    </div>
 
 </body>
 

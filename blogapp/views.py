@@ -14,7 +14,7 @@ from django.contrib import messages
 @login_required(login_url = "login_user")
 def home(request):
 
-    post = Post.objects.order_by("-date_created")[0:3]
+    post = Post.objects.order_by("-date_created")[0:6]
 
     content = {
 
