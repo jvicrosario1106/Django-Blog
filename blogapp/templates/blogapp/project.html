@@ -21,14 +21,16 @@
     <img src="{{post.img.url}}" alt="" width=500>
 
     <a href="{% url 'the_project' post.id %}" class="btn btn-success">Read more</a>
-
-
+    {% if request.user.is_staff %}
+    <a href="{% url 'updatepost' post.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
+    <a href="{% url 'deletepost' post.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
+    {% endif %}
     {% endfor %}
 
 
 
     {% if posts.has_previous %}
-    <a href="?page={{posts.previous_page_number}}">Previous</a>
+    <a href="?page={{posts.previous_page_number}}" class="btn btn-primary">Previous</a>
     {% endif %}
 
     {% for num in posts.paginator.page_range %}
@@ -42,7 +44,7 @@
     {%endfor%}
 
     {% if posts.has_next %}
-    <a href="?page={{posts.next_page_number}}">Next</a>
+    <a href="?page={{posts.next_page_number}} " class="btn btn-primary">Next</a>
     {% endif %}
 
 

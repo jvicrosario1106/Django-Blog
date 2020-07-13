@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+    
+    
 </head>
 <body>
     {% include 'blogapp/nav.html' %}
 
+    <main>
+        <!-- <h3>Do what you do</h3> -->
+        <!-- <img class = "background" src="{% static '/images/background16.jpg' %}" alt=""> -->
+    </main>
+
+
     <div class="main-content">
 
     {% for posts in post %}
-
-   
-    
 
     <div class="content">
     <img src="{{posts.img.url}}" alt="" width="500">
@@ -26,17 +31,24 @@
     <p>{{posts.desc|truncatewords:"30"}}</p>
     <a href="#" class='btn btn-success'>Read more</a>
     {% if request.user.is_staff %}
-    <!-- <a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
-    <a href="{% url 'deletepost' posts.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a> -->
-    
-    </div>
+    <a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
+    <a href="{% url 'deletepost' posts.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
     {% endif %}
+
+    </div>
+    
     </div>
 
-
-
-    
     {% endfor %}
     </div>
+
+
+    <!-- Subcribe Now -->
+    <section class="subcribe">
+        <h1>Subcribe Now. To be updated in a post</h1>
+        <a href="#">Subcribe Now!</a>
+    </section>
+
+
 </body>
 </html>

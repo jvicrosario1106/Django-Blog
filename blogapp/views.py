@@ -11,7 +11,7 @@ from django.contrib import messages
 # Create your views here.
 
 
-@login_required(login_url = "login_user")
+# @login_required(login_url = "login_user")
 def home(request):
 
     post = Post.objects.order_by("-date_created")[0:6]
@@ -190,7 +190,7 @@ def addauthor(request):
 
     return render(request, 'blogapp/addauthor.html',content)
 
-
+@login_required(login_url = "login_user")
 @allowed(allowed_roles=['admin'])
 def updatepost(request,pk):
     post = Post.objects.get(id=pk)
@@ -208,7 +208,8 @@ def updatepost(request,pk):
 
     return render(request, "blogapp/updatepost.html",content)
 
-
+@login_required(login_url = "login_user")
+@allowed(allowed_roles=['admin'])
 def deletepost(request,pk):
     post = Post.objects.get(id=pk)
     post.delete()
