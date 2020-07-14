@@ -27,6 +27,26 @@
         width:100%;
         margin-top: 2rem;
     }
+    .about-website{
+        margin-top: 3rem;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        
+    }
+    .about-content{
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
+    }
+
+
+
     .content>img{
         max-width: 100%;
         height: auto;
@@ -136,6 +156,23 @@
         text-decoration: none;
         
     }
+    .about-website{
+        margin-top: 3rem;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        
+    }
+    .about-content{
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
+    }
 }
 
 @media only screen 
@@ -201,6 +238,23 @@
         transition: 1s ease-out;
         text-decoration: none;
         
+    }
+    .about-website{
+        margin-top: 3rem;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        
+    }
+    .about-content{
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
     }
 }
 
@@ -271,6 +325,23 @@
         text-decoration: none;
         
     }
+    .about-website{
+        margin-top: 3rem;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        
+    }
+    .about-content{
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
+    }
 }
 
 
@@ -336,6 +407,23 @@
         transition: 1s ease-out;
         text-decoration: none;
         
+    }
+    .about-website{
+        margin-top: 3rem;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        
+    }
+    .about-content{
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
     }
 }
 
@@ -417,6 +505,28 @@
         text-decoration: none;
         
     }
+    .about-website{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 30px 1fr 1fr 30px;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        grid-column: 2/3;
+        
+    }
+    .about-content{
+        padding:10px;
+        grid-column: 3/4;
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
+    }
     
 }
 
@@ -454,9 +564,6 @@
     }
     .content>img{
         width: 100%;
-        
-        
-        
     }
     .second-content{
         box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
@@ -502,6 +609,28 @@
         transition: 1s ease-out;
         text-decoration: none;
         
+    }
+    .about-website{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 70px 1fr 1fr 70px;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        grid-column: 2/3;
+        
+    }
+    .about-content{
+        padding:16px;
+        grid-column: 3/4;
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
     }
     
 }
@@ -591,9 +720,6 @@
         position: absolute;
         top:30%;
         left:69%;
-        
-        
-        
     }
     section>a:hover{
         background: none;
@@ -603,5 +729,27 @@
         transition: 1s ease-out;
         text-decoration: none;
         
+    }
+    .about-website{
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 190px 2fr 2fr 190px;
+    }
+    .about-website .background1{
+        max-width: 100%;
+        grid-column: 2/3;
+        
+    }
+    .about-content{
+        padding:16px;
+        grid-column: 3/4;
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        max-width: 100%;
+    }
+    .about-content>h1{
+        font-size: 25px;
+    }
+    .about-content>p{
+        text-align: justify;
     }
 }
