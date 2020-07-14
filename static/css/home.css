@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+}
 @media only screen 
   and (min-width: 280px) 
   and (max-width: 480px){
@@ -19,8 +19,8 @@
         font-size: 50px;
     }
     main .background{
-        width: 100%;
-        height:400px;
+        max-width: 100%;
+        
         
     }
     .main-content{

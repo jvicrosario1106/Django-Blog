@@ -1,5 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400&family=Yellowtail&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
-.navbar-brand{
-    font-family: 'Lobster', cursive;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 60px;
+    background-color: coral;
+}
+
+nav .brand-title{
+    margin-left: 3rem;
+    font-size: 30px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-right: 3rem;
+    
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid black;
+}
+
+.toggle-button{
+    position: absolute;
+    top:1.3rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media (max-width:1170px){
+    .toggle-button{
+        display: flex;
+    }
+    nav ul{
+        display: none;
+
+    }
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav ul.active{
+        display: flex;
+    }
+    nav ul li a:hover{
+        
+        padding: 10px 15px;
+        background-color: #ccc;
+        border: none;
+    }
+    
 }
