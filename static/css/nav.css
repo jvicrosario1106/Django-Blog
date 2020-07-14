@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -9,18 +12,47 @@ nav{
     justify-content: space-between;
     align-items: center;
     line-height: 60px;
-    background-color: coral;
+    background:none;
+    
 }
+.login{
+    background-color: #fed330;
+    padding:5px 15px;
+    border-radius: 6px;
+    border: none;
+}
+.login:hover{
+    color:#000;
+    background-color: rgba(254, 211, 48,0.6);
+}
+.user{
+    border-bottom: 3px solid #000;
+}
+
+
+.logout{
+    background-color: #fed330;
+    padding:5px 15px;
+    border-radius: 6px;
+    border: none;
+}
+.logout:hover{
+    color:#000;
+    background-color: rgba(254, 211, 48,0.6);
+}
+
 
 nav .brand-title{
     margin-left: 3rem;
     font-size: 30px;
+    font-family: 'Lobster', cursive;
 }
 nav ul{
+    font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 55%;
     margin-right: 3rem;
     
 }
@@ -31,11 +63,12 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 19px;
     color: #000;
 }
+
 nav ul li a:hover{
-    border-bottom: 2px solid black;
+    color:rgba(53, 59, 72,0.3)
 }
 
 .toggle-button{
@@ -52,9 +85,12 @@ nav ul li a:hover{
 .toggle-button .bar{
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 10px;
 }
+
+
+
 
 @media (max-width:1170px){
     .toggle-button{
@@ -76,9 +112,10 @@ nav ul li a:hover{
 
     nav ul.active{
         display: flex;
+        ;
     }
     nav ul li a:hover{
-        
+        color: #000;
         padding: 10px 15px;
         background-color: #ccc;
         border: none;
