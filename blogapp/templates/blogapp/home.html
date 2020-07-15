@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
 <body>
@@ -20,6 +20,27 @@
         <img class = "background" src="{% static '/images/background17.jpg' %}" alt="">
         
     </main>
+
+    <div class="features">
+        <h1>Our Core Features</h1>
+        <div class="f-1">
+            <i class="fa fa-chain"></i>
+            <h3>Highly Versatile</h3>
+            <p>Responsive Website</p>
+        </div>
+        <div class="f-2">
+            <i class="fa fa-home"></i>
+            <h3>Highly Versatile</h3>
+            <p>Responsive Website</p>
+        </div>
+        <div class="f-3">
+            <i class="fa fa-bars"></i>
+            <h3>Highly Versatile</h3>
+            <p>Responsive Website</p>
+        </div>
+    </div>
+
+
 
     <div class="about-website">
         <img class = "background1" src="{% static '/images/background6.jpg' %}" alt="">
@@ -41,8 +62,8 @@
 
     <div class="second-content">
     <h1>{{posts.title}}</h1>
-    <p>{{posts.desc|truncatewords:"30"}}</p>
-    <a href="#" class='btn btn-success'>Read more</a>
+    <p>{{posts.desc|truncatewords:"25"}}</p>
+    <a href="#" class='btn btn-success rm'>Read more</a>
     {% if request.user.is_staff %}
     <a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
     <a href="{% url 'deletepost' posts.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
