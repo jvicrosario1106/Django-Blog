@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (max-width:240px){
+.login-form{
+    background-image: url("/static/images/background18.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height:780px ;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Raleway', sans-serif;
+}
+form>input{
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    border: 3px solid  #fff;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+form>input:hover{
+    
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 3px solid rgba(254, 211, 48,1.0);
+}
+form button{
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 50px;
+    border: none;
+    background-color: rgba(254, 211, 48,1.0);
+    color: #fff;
+    margin: 1rem 0rem 2rem 0rem;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+form button:hover{
+    
+    background-color: rgba(254, 211, 48,0.9);
+    
+ 
+}
+form a{
+    color: #fff;
+}
+}
+
+
+@media only screen and (min-width:241px)and (max-width:306px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 10px;
+        font-size:19px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    form>input:hover{
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 7px 50px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        
+        background-color: rgba(254, 211, 48,0.9);
+        
+     
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+
+@media only screen and (min-width:307px) and (max-width:400px){
+.login-form{
+    background-image: url("/static/images/background18.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height:780px ;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Raleway', sans-serif;
+}
+form>input{
+    padding: 5px 10px;
+    font-size: 24px;
+    border: none;
+    border: 3px solid  #fff;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+form>input:hover{
+    
+    border: 3px solid rgba(254, 211, 48,1.0);
+}
+form button{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 50px;
+    border: none;
+    background-color: rgba(254, 211, 48,1.0);
+    color: #fff;
+    margin: 1rem 0rem 2rem 0rem;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+form button:hover{
+    
+    background-color: rgba(254, 211, 48,0.9);
+    
+ 
+}
+form a{
+    color: #fff;
+}
+}
+
+@media only screen and (min-width:401px) and (max-width:460px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 15px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 50px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+    
+
+@media only screen and (min-width:461px) and (max-width:530px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;     
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 400px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 50px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+        
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+@media only screen and (min-width:531px) and (max-width:550px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 400px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 50px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+@media only screen and (min-width:551px) and (max-width:600px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 450px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+@media only screen and (min-width:601px) and (max-width:700px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 500px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+@media only screen and (min-width:701px) and (max-width:750px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 550px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+@media only screen and (min-width:751px) and (max-width:800px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 600px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+@media only screen and (min-width:801px) and (max-width:850px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 650px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+
+@media only screen and (min-width:851px) and (max-width:900px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 650px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+
+@media only screen and (min-width:901px) and (max-width:1000px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+        background-color: rgba(245, 246, 250,0.2);
+        border-radius: 6px;
+        padding: 3rem;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 500px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+@media only screen and (min-width:1001px) and (max-width:1200px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+        background-color: rgba(245, 246, 250,0.2);
+        border-radius: 6px;
+        padding: 3rem;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 500px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+
+@media only screen and (min-width:1201px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+        background-color: rgba(245, 246, 250,0.2);
+        border-radius: 6px;
+        padding: 3rem;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 400px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
+
+@media only screen and (min-width:1401px) and (max-width:1200px){
+    .login-form{
+        background-image: url("/static/images/background18.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        min-height:780px ;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-family: 'Raleway', sans-serif;
+        background-color: rgba(245, 246, 250,0.2);
+        border-radius: 6px;
+        padding: 3rem;
+    }
+    form>input{
+        padding: 5px 20px 5px 5px;
+        width: 500px;
+        font-size:26px;
+        border: none;
+        border: 3px solid  #fff;
+        font-family: 'Raleway', sans-serif;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    form>input:hover{
+        
+        border: 3px solid rgba(254, 211, 48,1.0);
+    }
+    form button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 70px;
+        border: none;
+        background-color: rgba(254, 211, 48,1.0);
+        color: #fff;
+        margin: 1rem 0rem 2rem 0rem;
+        border-radius: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    form button:hover{
+        background-color: rgba(254, 211, 48,0.9);
+    }
+    form a{
+        color: #fff;
+    }
+}
