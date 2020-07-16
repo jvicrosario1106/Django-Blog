@@ -54,6 +54,10 @@ main>a:hover{
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
 }
+main .background{
+    min-height: 700px;
+    width: 100%;
+}
 main p{
     color: #fff;
     user-select: none;
@@ -76,6 +80,18 @@ main p{
 .features h1{
     font-family: 'Lobster', cursive;
     font-size: 40px;
+}
+
+h2{
+    font-family: 'Lobster', cursive;
+}
+
+hr{
+    width: 70%;
+    margin: 2rem auto;
+    border: 0.3px solid black;
+    background-color: black;
+
 }
 
 @media only screen  and (max-width: 320px){
@@ -194,6 +210,9 @@ main p{
         text-decoration: none;
         
     }
+    h2{
+        margin-left: 1rem;
+    }
 }
 
 @media only screen 
@@ -204,12 +223,12 @@ main p{
     }
     main p{
         position: absolute;
-        top:50%;
+        top:40%;
         left: 50%;
         transform: translate(-50%,-50%);
         width: 80%;
         margin-left:1.5rem;
-        font-size: 23px;
+        font-size: 50px;
        
     }
     main .background{
@@ -217,12 +236,14 @@ main p{
        
     }
     main>a{
-        display: none;
+        position: absolute;
+        top:70%;
+        left:15%;
     }
     main .musk{
         position: absolute;
-        top: 75%;
-        font-size: 10px;
+        top: 65%;
+        font-size: 30px;
     }
     .main-content{
         /* width:100%; */
@@ -314,6 +335,9 @@ main p{
     .about-content>p{
         text-align: justify;
     }
+    h2{
+        margin-left: 2rem;
+    }
 }
 
 @media only screen 
@@ -325,27 +349,26 @@ main p{
     main p{
         position: absolute;
         top:40%;
-        left: 73%;
+        left: 45%;
         transform: translate(-50%,-50%);
-        width: 30%;
+        width: 70%;
         margin-left:1.5rem;
-        font-size: 30px;
+        font-size: 60px;
        
     }
     main .background{
         width: 100%;
         height:400px;
     }
-    main>a{
-        position: absolute;
-        left:60%;
-        top:65%;
-        padding: 5px 13px;
-    }
     main .musk{
         position: absolute;
         top: 65%;
-        font-size: 10px;
+        font-size: 35px;
+    }
+    main>a{
+        position: absolute;
+        top:70%;
+        left:15%
     }
     .main-content{
         /* width:100%; */
@@ -432,6 +455,10 @@ main p{
     .about-content>p{
         text-align: justify;
     }
+    h2{
+        margin-left: 2rem;
+        font-size: 30px;
+    }
 }
 
 @media only screen 
@@ -444,23 +471,23 @@ main p{
     main p{
         position: absolute;
         top:40%;
-        left: 75%;
+        left: 45%;
         transform: translate(-50%,-50%);
-        width: 30%;
+        width: 70%;
         margin-left:1.5rem;
-        font-size: 30px;
+        font-size: 60px;
        
     }
     main>a{
         position: absolute;
-        left:63%;
-        top:65%;
-        padding: 5px 13px;
+        left:13%;
+        top:70%;
+       
     }
     main .musk{
         position: absolute;
         top: 65%;
-        font-size: 10px;
+        font-size: 35px;
     }
     main .background{
         width: 100%;
@@ -551,6 +578,10 @@ main p{
     .about-content>p{
         text-align: justify;
     }
+    h2{
+        margin-left: 2rem;
+        font-size: 35px;
+    }
 }
 
 
@@ -563,23 +594,23 @@ main p{
     main p{
         position: absolute;
         top:40%;
-        left: 76%;
+        left: 50%;
         transform: translate(-50%,-50%);
-        width: 35%;
+        width: 70%;
         margin-left:1.5rem;
-        font-size: 30px;
+        font-size: 70px;
        
     }
     main>a{
         position: absolute;
-        left:61%;
-        top:55%;
-        padding: 5px 13px;
+        left:16%;
+        top:70%;
+        
     }
     main .musk{
         position: absolute;
-        top: 57%;
-        font-size: 10px;
+        top: 65%;
+        font-size: 35px;
     }
     main .background{
         width: 100%;
@@ -605,7 +636,7 @@ main p{
         font-size: 40px;
         color:#fed330;
         /* background-color: yellow; */
-        padding: 45px 35px;
+        padding: 50px 35px;
         display: grid;
         place-items: center;
         margin:2rem 0rem;
@@ -668,6 +699,11 @@ main p{
     .about-content>p{
         text-align: justify;
     }
+    h2{
+        margin-left: 2rem;
+        font-size: 35px;
+        text-decoration: underline;
+    }
 }
 
 @media only screen 
@@ -679,23 +715,22 @@ main p{
     main p{
         position: absolute;
         top:40%;
-        left: 77%;
+        left: 50%;
         transform: translate(-50%,-50%);
-        width: 33%;
+        width: 70%;
         margin-left:1.5rem;
-        font-size: 43px;
+        font-size: 70px;
        
     }
     main>a{
         position: absolute;
-        left:63%;
-        top:65%;
-        padding: 7px 13px;
+        left:17%;
+        top:69%;
     }
     main .musk{
         position: absolute;
         top: 64%;
-        font-size: 15px;
+        font-size: 40px;
     }
     main .background{
         width: 100%;
@@ -706,7 +741,7 @@ main p{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-top: 3rem;
+        margin-top: 1rem;
 
         
     }
@@ -807,12 +842,13 @@ main p{
     .about-website .background1{
         max-width: 100%;
         grid-column: 2/3;
+        min-height: 350px;
         
     }
     .about-content{
         padding:10px;
         grid-column: 3/4;
-        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        /* box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7); */
         max-width: 100%;
     }
     .about-content>h1{
@@ -821,7 +857,12 @@ main p{
     .about-content>p{
         text-align: justify;
     }
-    
+    h2{
+        margin-top: 1rem;
+        margin-left: 2rem;
+        font-size: 40px;
+        text-decoration: underline;
+    }
 }
 
 
@@ -834,22 +875,22 @@ main p{
     main p{
         position: absolute;
         top:40%;
-        left: 77%;
+        left: 50%;
         transform: translate(-50%,-50%);
-        width: 36%;
+        width: 80%;
         margin-left:1.5rem;
-        font-size: 49px;
+        font-size: 85px;
        
     }
     main>a{
         position: absolute;
-        left:62%;
-        top:67%;
+        left:13%;
+        top:70%;
     }
     main .musk{
         position: absolute;
         top: 64%;
-        font-size: 19px;
+        font-size: 45px;
     }
     main .background{
         width: 100%;
@@ -860,7 +901,7 @@ main p{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-top: 3rem;
+        margin-top: 1rem;
 
         
     }
@@ -921,8 +962,6 @@ main p{
         width: 100%;
         height: 190px;
         position: relative;
-        
-
 
     }
     section>h1{
@@ -967,7 +1006,7 @@ main p{
     .about-content{
         padding:16px;
         grid-column: 3/4;
-        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        /* box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7); */
         max-width: 100%;
     }
     .about-content>h1{
@@ -976,7 +1015,12 @@ main p{
     .about-content>p{
         text-align: justify;
     }
-    
+    h2{
+        margin-top: 1rem;
+        margin-left: 2rem;
+        font-size: 45px;
+        text-decoration: underline;
+    }
 }
 
 
@@ -990,23 +1034,23 @@ main p{
     main p{
         position: absolute;
         top:40%;
-        left: 79%;
+        left: 50%;
         transform: translate(-50%,-50%);
-        width: 40%;
+        width: 70%;
         margin-left:1.5rem;
-        font-size: 70px;
+        font-size: 90px;
        
     }
     main>a{
         position: absolute;
-        left:61%;
+        left:16%;
         top:70%;
        
     }
     main .musk{
         position: absolute;
-        top: 70%;
-        font-size: 20px;
+        top: 65%;
+        font-size: 45px;
     }
     main .background{
         width: 100%;
@@ -1018,7 +1062,7 @@ main p{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-top: 3rem;   
+        margin-top: 1rem;   
     }
     .content{
        flex:0 0 25%;
@@ -1065,13 +1109,14 @@ main p{
         grid-row: 2/3;
     }
     .second-content{
-        
+        height: 210px;
         box-shadow: -1px 11px 17px -9px rgba(0,0,0,0.75);
-        width: 99%;
+        width: 100%;
         padding: 6px 19px;
         margin-bottom: 2rem;
-       
+      
     }
+    
     .second-content>p{
         text-align: justify;
     }
@@ -1129,7 +1174,7 @@ main p{
         padding: 16px;
         grid-column: 3/4;
         grid-row: 1/2;
-        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        /* box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7); */
         width: 100%;
     }
     .about-content>h1{
@@ -1138,6 +1183,12 @@ main p{
     .about-content>p{
         text-align: justify;
         
+    }
+    h2{
+        margin-top: 1rem;
+        margin-left: 8.5rem;
+        font-size: 46px;
+        text-decoration: underline;
     }
     
 }
@@ -1148,12 +1199,12 @@ main p{
     }
     main p{
         position: absolute;
-        top:40%;
-        left: 75%;
+        top:38%;
+        left: 70%;
         transform: translate(-50%,-50%);
-        width: 40%;
+        width: 50%;
         margin-left:1.5rem;
-        font-size: 70px;
+        font-size: 90px;
        
     }
     
@@ -1166,21 +1217,21 @@ main p{
     }
     main>a{
         position: absolute;
-        left:56%;
-        top:70%;
-        padding: 15px 25px;
+        left:46%;
+        top:75%;
+        
     }
     main .musk{
         position: absolute;
-        top: 65%;
-        font-size: 30px;
+        top: 70%;
+        font-size: 45px;
     }
     .main-content{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-top: 3rem;
+        margin-top: 1rem;
 
         
     }
@@ -1295,7 +1346,7 @@ main p{
         padding: 16px;
         grid-column: 3/4;
         grid-row: 1/2;
-        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7);
+        /* box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.7); */
         width: 100%;
     }
     .about-content>h1{
@@ -1304,5 +1355,11 @@ main p{
     .about-content>p{
         text-align: justify;
         
+    }
+    h2{
+        margin-top: 2rem;
+        margin-left: 10.5rem;
+        font-size: 50px;
+        text-decoration: underline;
     }
 }
