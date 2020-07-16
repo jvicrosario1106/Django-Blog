@@ -6,32 +6,21 @@
     box-sizing: border-box;
 }
 
-.login-form{
+.register{
     background-image: url("/static/images/background17.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 700px;
+    position: relative;
+    min-height: 760px;
+    font-family: 'Raleway', sans-serif;
 }
+form button{
+    font-family: 'Raleway', sans-serif;
 
-
-
-@media only screen and (max-width:270px){
-    .login-form{
-        min-height: 700px;
-    }
-    .container{
-        margin-top: 4rem;
-        position: absolute;
-        background-color: #fff;
-        max-width: 100%;
-        padding: 0;
-        min-height: 550px;
-        
-    }
-    .inputs>input{
-        font-size: 17px;
-        padding: 5px 8px;
-        width:50%
-    }
+}
+.forms{
+    background-color: rgba(255,255,255,1);
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
 }

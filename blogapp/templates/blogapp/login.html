@@ -8,29 +8,36 @@
   <link rel="stylesheet" href="{% static '/css/login.css' %}">
 </head>
 <body>
-  <div class="login-form">
-    <form class="m-5" method = "POST">
-        {% csrf_token %}
-    
-          <input type="text" class="form-control" name="username" placeholder="Enter Username">
-         
-          <input type="password" name = "password" class="form-control" placeholder="Password">
+  {% include 'blogapp/nav.html' %}
 
+
+  <div class="login-form">
+
+        <form method = "POST" class="container">
+            {% csrf_token %}
+            <div class="inputs">
+              <p>Welcome to JV Blog</p>
+              <label for="username">Username</label>
+              <input type="text" class="form-control" name="username" placeholder="Enter Username">
+              <label for="password">Password</label>
+              <input type="password" name = "password" class="form-control" placeholder="Password">
+
+            
+              <!-- {% for message in messages %}
+          
+              <div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Sorry </strong>{{message}}
+              </div>
+          
+              {% endfor %} -->
         
-        <!-- {% for message in messages %}
-    
-        <div class="alert alert-danger alert-dismissible">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Sorry </strong>{{message}}
-        </div>
-    
-        {% endfor %} -->
-    
-        <button type="submit" class="btn btn-primary">Submit</button>
-    
-        <a href="{% url 'register' %}">Sign-Up</a>
-      
-    </form>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <a href="{% url 'register' %}">Sign-Up</a>
+            </div>
+        </form>
+
     </div>
+
 </body>
 </html>

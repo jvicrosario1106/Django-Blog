@@ -2,19 +2,27 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div class="register">
+   
     {% for message in messages %}
 
-    <div class="alert alert-success alert-dismissible">
+    <div class="alert alert-warning alert-dismissible">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>Join Now! </strong>{{message}}
     </div>
 
     {% endfor %}
-    <form action="" method="post" class="m-5">
-        {% csrf_token %}
-        {{form|crispy}}
-        <button class ="btn btn-primary">Join Now!</button>
-       
-    </form>
-
+    <div class="d-flex justify-content-center">
+        <div class="d-flex forms  mt-5 mb-1 ml-2 mr-2">
+            <form action="" method="post" class="m-5">
+                {% csrf_token %}
+            
+                {{form|crispy}}
+            
+                <button class ="btn btn-dark">Join Now!</button>
+                <button class ="btn btn-warning">Login Now!</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
