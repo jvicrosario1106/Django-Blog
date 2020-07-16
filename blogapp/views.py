@@ -5,9 +5,11 @@ from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from .decorators import isauthentication,allowed
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.contrib.auth.models import User,Group
 from django.contrib import messages
+
+
 
 # Create your views here.
 
@@ -39,7 +41,24 @@ def results(request):
     return render(request, 'blogapp/results.html', content)
 
 
+def get_cat_num(request):
+     cat_num  = Post.objects.values("category__cat_name").annotate(Count("category"))
+     return cat_num
+
+def catresult(request,cats):
+    post_cat = Post.objects.filter(category=cats)
+    print(post_cat)
+
+    content ={
+        "post_cat":post_cat
+    }
+
+    return render(request, "blogapp/catresult.html",content)
+
+
 def projects(request):
+    cat_num1 = get_cat_num(request)
+    print(cat_num1)
     post = Post.objects.all()
     paginator = Paginator(post,2)
     page = request.GET.get('page')
@@ -53,7 +72,8 @@ def projects(request):
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
     content = {
-        "posts":posts
+        "posts":posts,
+        "cat_num1":cat_num1
     }
     return render(request, 'blogapp/project.html',content)
 

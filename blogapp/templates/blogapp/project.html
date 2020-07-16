@@ -12,18 +12,28 @@
         <input type="text" name="q" placeholder="Search Title">
         <button class="btn btn-warning">Search</button>
     </form>
+    
+    {% for num_cat in cat_num1 %}
+    
+    <p>{{num_cat.category__cat_name}}</p>
+    <p>{{num_cat.category__count}}</p>
 
-
+    {%endfor%}
 
     {% for post in posts %}
 
     <h1>{{post.title}}</h1>
     <img src="{{post.img.url}}" alt="" width=500>
+        {% for cat in post.category.all %}
+            <a href="{% url 'catresult' cat.id %}">{{cat}}</a>
+        {% endfor %}
+
 
     <a href="{% url 'the_project' post.id %}" class="btn btn-success">Read more</a>
     {% if request.user.is_staff %}
     <a href="{% url 'updatepost' post.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
     <a href="{% url 'deletepost' post.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
+
     {% endif %}
     {% endfor %}
 

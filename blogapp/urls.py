@@ -8,6 +8,7 @@ urlpatterns = [
 
     path('', views.home, name="home"),
     path('projects/', views.projects, name="projects"),
+    path('catresult/<str:cats>/', views.catresult, name="catresult"),
     path('results/', views.results, name="results"),
     path('the_project/<str:pk>/', views.the_project, name="the_project"),
 

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for num_cat in cat_num %}
+    <p>{{num_cat.category__cat_name}}:{{num_cat.category__count}}</p>
+    {% endfor %}
+    {% for cat in post_cat %}
+    <h1>{{cat.title}}</h1>
+    {% endfor %}
+</body>
+</html>
