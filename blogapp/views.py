@@ -59,8 +59,9 @@ def catresult(request,cats):
 def projects(request):
     cat_num1 = get_cat_num(request)
     print(cat_num1)
-    post = Post.objects.all()
-    paginator = Paginator(post,2)
+    three_recent_posts = Post.objects.order_by("-date_created")[0:3]
+    post = Post.objects.order_by("-date_created")
+    paginator = Paginator(post,4)
     page = request.GET.get('page')
 
     try:
@@ -73,7 +74,8 @@ def projects(request):
         posts = paginator.page(paginator.num_pages)
     content = {
         "posts":posts,
-        "cat_num1":cat_num1
+        "cat_num1":cat_num1,
+        "three_recent_posts":three_recent_posts
     }
     return render(request, 'blogapp/project.html',content)
 

@@ -1,64 +1,112 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/project.css' %}">
     <title>Document</title>
 </head>
 <body>
+    
     {% include 'blogapp/nav.html' %}
+
+    <main>
+        <h1>Blog Posts</h1>
+    </main>
+
+<div class="main-content">
 
     <form action="{% url 'results' %}">
         <input type="text" name="q" placeholder="Search Title">
         <button class="btn btn-warning">Search</button>
     </form>
-    
-    {% for num_cat in cat_num1 %}
-    
-    <p>{{num_cat.category__cat_name}}</p>
-    <p>{{num_cat.category__count}}</p>
-
-    {%endfor%}
-
+    <h2>Blog Posts</h2>
+    <div class="blog-post">
+        <!-- <h2>Blog Posts</h2> -->
     {% for post in posts %}
+        <div class="blog-content">
+            <img src="{{post.img.url}}" alt="" width=500>
+            <h1>{{post.title}}</h1>
+                {% for cat in post.category.all %}
+                    <a class="category" href="{% url 'catresult' cat.id %}">{{cat}}</a>
+                {% endfor %}
 
-    <h1>{{post.title}}</h1>
-    <img src="{{post.img.url}}" alt="" width=500>
-        {% for cat in post.category.all %}
-            <a href="{% url 'catresult' cat.id %}">{{cat}}</a>
-        {% endfor %}
+            <p>{{post.desc|truncatewords:"30"}}</p>
+            <a  class="read-more" href="{% url 'the_project' post.id %}" class="btn btn-success">Read more</a>
+            
+            {% if request.user.is_staff %}
 
+            <a href="{% url 'updatepost' post.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
+            <a href="{% url 'deletepost' post.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
 
-    <a href="{% url 'the_project' post.id %}" class="btn btn-success">Read more</a>
-    {% if request.user.is_staff %}
-    <a href="{% url 'updatepost' post.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
-    <a href="{% url 'deletepost' post.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
-
-    {% endif %}
+            {% endif %}
+        </div>
     {% endfor %}
+    </div>
 
 
 
-    {% if posts.has_previous %}
-    <a href="?page={{posts.previous_page_number}}" class="btn btn-primary">Previous</a>
-    {% endif %}
 
-    {% for num in posts.paginator.page_range %}
-        
-        {% if posts.number == num %}
-        <a class="btn btn-primary" href = "?page={{num}}">{{num}}</a>
-        {% elif num > posts.number|add:"-3" and  num < posts.number|add:"3" %}
-        <a class="btn btn-outline-primary" href="?page={{num}}">{{num}}</a>
+    <div class="paginator">
+
+        {% if posts.has_previous %}
+        <a href="?page={{posts.previous_page_number}}" class="previous">Previous</a>
         {% endif %}
 
-    {%endfor%}
+        {% for num in posts.paginator.page_range %}
+            
+            {% if posts.number == num %}
+            <a class="current" href = "?page={{num}}">{{num}}</a>
+            {% elif num > posts.number|add:"-3" and  num < posts.number|add:"3" %}
+            <a class="pages" href="?page={{num}}">{{num}}</a>
+            {% endif %}
 
-    {% if posts.has_next %}
-    <a href="?page={{posts.next_page_number}} " class="btn btn-primary">Next</a>
-    {% endif %}
+        {%endfor%}
+
+        {% if posts.has_next %}
+
+        <a href="?page={{posts.next_page_number}} " class="next">Next</a>
+
+        {% endif %}
+
+    </div>
 
 
-    
+    <div class="cat-num">
+
+        <div class="recent-post">
+            <h4>Recent Posts</h4>
+                <div class="post">
+                    {% for recent in three_recent_posts%}
+                        <img src="{{recent.img.url}}" alt="" width="100">
+                        <span><a href="">{{recent.title}}</a></span>
+                        <p>{{recent.desc|truncatewords:"15"}}</p>
+                        
+                    {% endfor %}
+                </div>
+        </div>
+
+        <div class="cat">
+            <h4>Categories</h4>
+            <div class="cat-content">
+                {% for num_cat in cat_num1 %}
+                <p>{{num_cat.category__cat_name}}
+                    <span class="count">({{num_cat.category__count}})</span>
+                </p>
+                
+                
+                {%endfor%}
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
 
 </body>
 </html>
