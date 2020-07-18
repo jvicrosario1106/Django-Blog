@@ -24,6 +24,10 @@ def home(request):
             newsletter = form.save(commit=False)
             newsletter.user = request.user
             newsletter.save()
+            messages.success(request,"You've Successfully Subcribe. You will be updated")
+
+        else:
+            messages.info(request,"Please Try Another Gmail Accounts. Thank You")
     else:
          form = NewsletterForm()
          

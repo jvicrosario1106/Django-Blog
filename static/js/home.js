@@ -5,16 +5,16 @@ var btnSubmit = document.querySelector(".news-submit");
 var emailInput = document.querySelector(".email")
 emailInput.value = '';
 const forms = document.querySelector("#form")
-btnSubmit.addEventListener("click",function(e){
+forms.addEventListener("submit",function(e){
     e.preventDefault()
-    
+   
     if (emailInput.value !== ""){
-        // forms.submit();
+        
         var r = confirm("Are you sure you want to subcribe?")
+       
         if (r == true){
-            alert("Congratulations! We will update you about future posts in this website😍")
-            forms.submit();
-            forms.reset();
+            alert("Click OK to see the results of your subcribing")
+
         }
         else{
             alert("You Cancelled your subcriptions!")
@@ -24,8 +24,11 @@ btnSubmit.addEventListener("click",function(e){
         alert("Please Enter your Gmail Account 😀")
    }
    
-    
-},false)
+   forms.submit();
+   forms.reset();
+})
+
+
 
 modalBtn.addEventListener("click",function(){
     newsLetter.classList.add("active")

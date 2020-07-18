@@ -86,13 +86,6 @@ h2{
     font-family: 'Lobster', cursive;
 }
 
-hr{
-    width: 70%;
-    margin: 2rem auto;
-    border: 0.3px solid black;
-    background-color: black;
-
-}
 form{
     background-color: #fff;
     border: 1px solid #000;
@@ -154,7 +147,13 @@ section{
     min-height: 200px;
 }
 
+section>h1{
+    font-family: 'Lobster', cursive;
+}
 
+section button{
+    font-family: 'Raleway', sans-serif;
+}
 
 
 @media only screen  and (max-width: 320px){
@@ -246,32 +245,11 @@ section{
         font-size: 18px;
     }
     section{
-        background: red;
+        /* background: red; */
         margin: 2rem;
         /* width: 100%; */
         height: 250px;
         text-align: center;
-    }
-    section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
-        color: #fff;
-        text-decoration: none;
-        font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
-        color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
-        
     }
     h2{
         margin-left: 1rem;
@@ -283,6 +261,25 @@ section{
         flex-direction: column;
         height: 40%;
         width: 80%;
+    }
+    section>button{
+        width: 75%;
+        padding: 10px 0px;
+        font-size: 20px;
+        margin-top: 1rem;
+    }
+    section>h1{
+        font-size: 30px;
+        color: #fff;
+        margin: 1rem;
+    }
+    form>i.fa-window-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 9px;
+        cursor: pointer;
+        font-size: 1rem;
     }
 }
 
@@ -353,35 +350,32 @@ section{
         height: 210px;
     }
     .second-content>h1{
-        font-size: 25px;
+        font-size: 23px;
     }
     section{
-        background: red;
-        /* width: 100%; */
         height: 240px;
         text-align: center;
         margin: 2rem;
+        padding: 1rem 0rem;
+    }
+    section>button{
+        width: 75%;
+        padding: 10px 0px;
+        font-size: 20px;
+        margin-top: 1rem;
     }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
-        color: #fff;
-        text-decoration: none;
         font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
         color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
-        
+        margin: 1rem;
+    }
+    form>i.fa-window-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 9px;
+        cursor: pointer;
+        font-size: 1rem;
     }
     .about-website{
         margin: 2rem;
@@ -489,30 +483,20 @@ section{
     }
     section{
         margin: 2rem;
-        background: red;
         /* width: 100%; */
         height: 220px;
+        padding:2rem 0rem;
         text-align: center;
     }
+    section>button{
+        width: 75%;
+        padding: 10px 0px;
+        font-size: 20px;
+        margin-top: 3rem;
+    }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
-        color: #fff;
-        text-decoration: none;
         font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
         color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
         
     }
     .about-website{
@@ -621,31 +605,21 @@ section{
         font-size: 30px;
     }
     section{
-        background: red;
         /* width: 100%; */
+        padding: 1rem 0rem;
         margin: 2rem;
         height: 200px;
         text-align: center;
     }
+    section>button{
+        width: 75%;
+        padding: 10px 0px;
+        font-size: 20px;
+        margin-top: 3rem;
+    }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
-        color: #fff;
-        text-decoration: none;
         font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
         color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
         
     }
     .about-website{
@@ -754,31 +728,21 @@ section{
         font-size: 30px;
     }
     section{
-        background: red;
         /* width: 100%; */
+        padding: 1rem 0rem;
         margin: 2rem;
         height: 200px;
         text-align: center;
     }
+    section>button{
+        width: 75%;
+        padding: 10px 0px;
+        font-size: 20px;
+        margin-top: 3rem;
+    }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
+        font-size: 40px;
         color: #fff;
-        text-decoration: none;
-        font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
-        color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
         
     }
     .about-website{
@@ -911,31 +875,23 @@ section{
        
     }
     section{
-        background: red;
         /* width: 100%; */
+        padding: 1rem 0rem;
         margin: 2rem;
         height: 200px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    section>button{
+        width: 30%;
+        padding: 10px 0px;
+        font-size: 20px;
     }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
+        font-size: 35px;
         color: #fff;
-        text-decoration: none;
-        font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
-        color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
         
     }
     .about-website{
@@ -1077,31 +1033,23 @@ section{
        
     }
     section{
-        background: red;
         /* width: 100%; */
+        padding: 1rem 0rem;
         margin: 2rem;
         height: 200px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    section>button{
+        width: 30%;
+        padding: 13px 0px;
+        font-size: 27px;
     }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
+        font-size: 43px;
         color: #fff;
-        text-decoration: none;
-        font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
-        color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
         
     }
     .about-website{
@@ -1250,31 +1198,23 @@ section{
         font-size: 30px;
     }
     section{
-        background: red;
         /* width: 100%; */
+        padding: 1rem 0rem;
         margin: 2rem;
         height: 200px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    section>button{
+        width: 30%;
+        padding: 15px 0px;
+        font-size: 30px;
     }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
+        font-size: 45px;
         color: #fff;
-        text-decoration: none;
-        font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
-        color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
         
     }
     .about-website{
@@ -1431,29 +1371,22 @@ section{
     }
     section{
         /* width: 100%; */
-        margin: 2rem;
+        padding: 1rem 0rem;
+        margin: 2rem 0rem;
         height: 200px;
-        text-align: center; 
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    section>button{
+        width: 20%;
+        padding: 15px 0px;
+        font-size: 25px;
     }
     section>h1{
-        margin-bottom: 2rem;
-    }
-    section>a{
-        border: 1px solid rgba(53, 59, 72,1.0);
-        background: rgba(53, 59, 72,1.0);
-        padding:10px;
+        font-size: 50px;
         color: #fff;
-        text-decoration: none;
-        font-size: 30px;
-        
-    }
-    section>a:hover{
-        background: none;
-        border: 1px solid #fff;
-        padding:10px;
-        color: #fff;
-        transition: 1s ease-out;
-        text-decoration: none;
         
     }
     .about-website{

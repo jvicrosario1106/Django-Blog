@@ -11,8 +11,11 @@
     
 </head>
 <body>
+    {% for m in messages %}
+        <p>{{m}}</p>
+    {% endfor %}
     {% include 'blogapp/nav.html' %}
-
+    
     <main>
         <p>I could neither watch it happen or be part of it</p>
         <p class="musk">- Elon Musk</p>
@@ -52,7 +55,6 @@
             <a href="#" class="read-more">Read More</a>
         </div>
     </div>
-    <hr>
     <h2>Recent Posts</h2>
 
     <div class="main-content">
@@ -82,23 +84,24 @@
             <form action="" method="POST" id="form" name="forms">
                 {% csrf_token %}
                 <h3>Subcribe Now</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto </p>
+                <p>Enter your <strong>Gmail account</strong> and be updated. Thank You 😀 </p>
                 {% render_field form.email class="email" placeholder="Your Email..." %}
                 <button class="news-submit" type="submit" >Subcribe</button>
                 <i class="fa fa-window-close"></i>
             </form>
     </div>
 
+    
 
     <!-- Subcribe Now -->
-    <section class="subcribe">
+    <section class="subcribe" id='section'>
         <h1>Subcribe Now. To be updated in a post</h1>
         <button class="modal-btn">Subcribe Now</button>
     </section>
 
-    <!-- {% include 'blogapp/footer.html' %} -->
+    {% include 'blogapp/footer.html' %}
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static '/js/home.js' %}"></script>
-
 </body>
 </html>

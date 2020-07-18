@@ -25,7 +25,7 @@
 
     <p>{{c.user}}</p>
     <p>{{c.body}}</p>
-    <p>{{c.comment_date|timesince}}</p>
+    <p>{{c.comment_date|timesince}} ago</p>
 
     {% endfor %}
     
@@ -38,6 +38,8 @@
 
     {% endif %}
     </div>
+
+    {% include 'blogapp/footer.html' %}
 
 </body>
 
