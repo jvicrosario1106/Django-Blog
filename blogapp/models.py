@@ -1,7 +1,19 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.core.validators import ValidationError
 # Create your models here.
+
+def email_validate(value):
+    if "@gmail.com" in value:
+        return value
+    else:
+        raise ValidationError("It must be a Gmail Account")
+
+class Newsletter(models.Model):
+    email = models.EmailField(unique=True, validators=[email_validate])
+
+    def __str__(self):
+        return self.email
 
 class Author(models.Model):
     name = models.OneToOneField(User, on_delete=models.CASCADE)

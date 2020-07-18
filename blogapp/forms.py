@@ -1,7 +1,8 @@
 from django.forms import ModelForm
-from .models import Post,Category,Author,Comment
+from .models import Post,Category,Author,Comment,Newsletter
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+
 
 
 class PostForm(ModelForm):
@@ -24,10 +25,16 @@ class CommentForm(ModelForm):
         model = Comment
         fields = ["body"]
 
+class NewsletterForm(ModelForm):
+    class Meta:
+        model = Newsletter
+        fields = ["email"]
+
 
 #REGISTER
 class UserForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ["username", "email", "password1", "password2"]
+        fields = ["username", "first_name", "last_name", "password1", "password2"]
+
 

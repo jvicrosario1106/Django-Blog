@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,12 +78,27 @@
     </div>
 
 
+    <div class="newsletter">
+            <form action="" method="POST" id="form" name="forms">
+                {% csrf_token %}
+                <h3>Subcribe Now</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto </p>
+                {% render_field form.email class="email" placeholder="Your Email..." %}
+                <button class="news-submit" type="submit" >Subcribe</button>
+                <i class="fa fa-window-close"></i>
+            </form>
+    </div>
+
+
     <!-- Subcribe Now -->
     <section class="subcribe">
         <h1>Subcribe Now. To be updated in a post</h1>
-        <a href="#">Subcribe Now!</a>
+        <button class="modal-btn">Subcribe Now</button>
     </section>
 
     <!-- {% include 'blogapp/footer.html' %} -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static '/js/home.js' %}"></script>
+
 </body>
 </html>

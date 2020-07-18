@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import Post,Category
-from .forms import PostForm,CategoryForm,AuthorForm,UserForm,CommentForm
+from .forms import PostForm,CategoryForm,AuthorForm,UserForm,CommentForm,NewsletterForm
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from .decorators import isauthentication,allowed
@@ -16,12 +16,22 @@ from django.contrib import messages
 
 # @login_required(login_url = "login_user")
 def home(request):
-
+     
     post = Post.objects.order_by("-date_created")[0:6]
+    if request.method == "POST":
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            newsletter = form.save(commit=False)
+            newsletter.user = request.user
+            newsletter.save()
+    else:
+         form = NewsletterForm()
+         
 
     content = {
 
-        "post":post
+        "post":post,
+        "form":form
 
     }
 
