@@ -2,9 +2,11 @@ var modalBtn = document.querySelector(".modal-btn");
 var newsLetter = document.querySelector(".newsletter")
 var modalClose = document.querySelector(".fa-window-close");
 var btnSubmit = document.querySelector(".news-submit");
-var emailInput = document.querySelector(".email")
+var emailInput = document.querySelector(".email");
+const forms = document.querySelector("#form");
+
 emailInput.value = '';
-const forms = document.querySelector("#form")
+
 forms.addEventListener("submit",function(e){
     e.preventDefault()
    
@@ -23,10 +25,10 @@ forms.addEventListener("submit",function(e){
    else{
         alert("Please Enter your Gmail Account 😀")
    }
+    forms.submit();
+    forms.reset();
    
-   forms.submit();
-   forms.reset();
-})
+},false)
 
 
 
@@ -38,3 +40,10 @@ modalClose.addEventListener("click",function(){
     newsLetter.classList.remove("active")
 })
 
+$(document).ready(function() {
+    // messages timeout for 10 sec 
+    setTimeout(function() {
+        $('.msg-content').fadeOut('slow');
+    }, 6000); // <-- time in milliseconds, 1000 =  1 sec
+    
+});

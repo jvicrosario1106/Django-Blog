@@ -22,6 +22,7 @@
                 <li><a href="{% url 'projects' %}">Posts</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Contact</a></li>
+               
                 {% if request.user.is_staff %}
                 <li><a href="">Add Post</a></li>
                 <li><a href="">Add Category</a></li>
@@ -32,6 +33,7 @@
                 <li><a href="{% url 'logout_user' %}" class="logout">Logout</a></li>
                 
                 {% else %}
+                <li><a href="" class="user">Hi! Visitor</a></li>
                 <li><a href="{% url 'login_user' %}" class="login">Login</a></li>
                 {% endif %}
             </ul>

@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 .about-content>h1{
     font-family: 'Raleway', sans-serif;
@@ -155,6 +156,27 @@ section button{
     font-family: 'Raleway', sans-serif;
 }
 
+/* .msg{
+    width: 100%;
+    position: relative;
+} */
+
+.msg-content{
+    position: relative;
+    width: 100%;
+    background-color: rgba(254, 211, 48,1.0);
+    min-height: 50px;
+
+}
+
+.msg-content>p{
+    position: absolute;
+    left:30%;
+    top:50%;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+}
 
 @media only screen  and (max-width: 320px){
     main{
@@ -182,7 +204,6 @@ section button{
         width: 100%;
     
     }
-
     .main-content{
       
         margin: 1rem;

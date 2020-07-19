@@ -11,15 +11,20 @@
     
 </head>
 <body>
-    {% for m in messages %}
-        <p>{{m}}</p>
-    {% endfor %}
+
     {% include 'blogapp/nav.html' %}
     
     <main>
+  
+        {% for m in messages %}
+        <div class='msg-content'>
+            <p>{{m}}</p>
+        </div>
+        {% endfor %}
+      
         <p>I could neither watch it happen or be part of it</p>
         <p class="musk">- Elon Musk</p>
-        <a href="#">Latest Post</a>
+        <a href="#latest">Latest Post</a>
         <img class = "background" src="{% static '/images/background17.jpg' %}" alt="">
         
     </main>
@@ -55,7 +60,7 @@
             <a href="#" class="read-more">Read More</a>
         </div>
     </div>
-    <h2>Recent Posts</h2>
+    <h2 id="latest">Recent Posts</h2>
 
     <div class="main-content">
     {% for posts in post %}
@@ -87,7 +92,7 @@
                 <p>Enter your <strong>Gmail account</strong> and be updated. Thank You 😀 </p>
                 {% render_field form.email class="email" placeholder="Your Email..." %}
                 <button class="news-submit" type="submit" >Subcribe</button>
-                <i class="fa fa-window-close"></i>
+                <i class="fa fa-window-close "></i>
             </form>
     </div>
 
