@@ -29,3 +29,576 @@ main>h1{
     text-decoration: underline;
     user-select: none;
 }
+.main-project{
+    margin-top:1rem;
+    font-family: 'Raleway', sans-serif;
+}
+.project{
+    background-color: #f5f6fa;
+}
+
+.comment-section>h3{
+    background: #353b48;
+    padding: 10px;
+    color: #fff;
+    margin: 2rem 0rem;
+}
+form>button{
+    margin: 2rem;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid rgba(254, 211, 48,1.0);
+    background: rgba(254, 211, 48,1.0);
+    cursor: pointer;
+}
+form>button:hover{
+    background: rgba(254, 211, 48,0.9);
+}
+form>.comm{
+    resize: none;
+    width: 100%;
+} 
+@media only screen and (max-width:275px){
+    main>h1{
+        font-size: 4rem;
+    }
+    .project{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+     
+    }
+    .project>h1{
+
+        text-align: center;
+        margin-top: 15px 0px;
+    }
+    .project>.bg1{
+
+        width: 100%;
+    
+    }
+    .project>.bg2{
+
+
+        width: 20%;
+        border-radius: 50%;
+        left: 40%;
+        top:25%
+    
+    }
+    .project>a{
+        margin-top: 1rem;
+        padding: 6px 15px;
+        border: 1px solid rgba(254, 211, 48,1.0);
+        color: rgba(254, 211, 48,1.0);
+    }
+    .project>.desc{
+
+        text-align: justify;
+        margin: 10px 0px 20px 0px;
+        padding: 15px;
+    }
+    .project>h4{
+        padding: 10px;
+        text-align: center;
+        
+    }
+    .comment-section{
+        margin: 0.5rem;
+    }
+    .comment{
+        background-color: #f5f6fa;
+        line-height: 1.5rem;
+        padding:10px;
+        margin: 1rem 0rem;
+    }
+    .comment>.users{
+        text-decoration: underline
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    form>.comm{
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+    } 
+    
+}
+
+@media only screen and (min-width:276px) and (max-width:300px){
+    main>h1{
+        font-size: 4rem;
+    }
+    .project{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+     
+    }
+    .project>h1{
+
+        text-align: center;
+        margin-top: 15px 0px;
+    }
+    .project>.bg1{
+
+        width: 100%;
+    
+    }
+    .project>.bg2{
+
+
+        width: 20%;
+        border-radius: 50%;
+        left: 40%;
+        top:25%
+    
+    }
+    .project>a{
+        margin-top: 1rem;
+        padding: 6px 15px;
+        border: 1px solid rgba(254, 211, 48,1.0);
+        color: rgba(254, 211, 48,1.0);
+    }
+    .project>.desc{
+
+        text-align: justify;
+        margin: 10px 0px 20px 0px;
+        padding: 15px;
+    }
+    .project>h4{
+        padding: 10px;
+        text-align: center;
+        
+    }
+    .comment-section{
+        margin: 0.5rem;
+    }
+    .comment{
+        background-color: #f5f6fa;
+        line-height: 1.5rem;
+        padding:10px;
+        margin: 1rem 0rem;
+    }
+    .comment>.users{
+        text-decoration: underline
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    form>.comm{
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+    } 
+}
+
+
+@media only screen and (min-width:301px) and (max-width:500px){
+    main>h1{
+        font-size: 4rem;
+    }
+    .project{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+     
+    }
+    .project>h1{
+
+        text-align: center;
+        margin-top: 15px 0px;
+    }
+    .project>.bg1{
+
+        width: 100%;
+    
+    }
+    .project>.bg2{
+
+
+        width: 20%;
+        border-radius: 50%;
+        left: 40%;
+        top:25%
+    
+    }
+    .project>a{
+        margin-top: 1rem;
+        padding: 6px 15px;
+        border: 1px solid rgba(254, 211, 48,1.0);
+        color: rgba(254, 211, 48,1.0);
+    }
+    .project>.desc{
+
+        text-align: justify;
+        margin: 10px 0px 20px 0px;
+        padding: 15px;
+    }
+    .project>h4{
+        padding: 10px;
+        text-align: center;
+        
+    }
+    .comment-section{
+        margin: 0.5rem;
+    }
+    .comment{
+        background-color: #f5f6fa;
+        line-height: 1.5rem;
+        padding:10px;
+        margin: 1rem 0rem;
+    }
+    .comment>.users{
+        text-decoration: underline
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    form>.comm{
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+    } 
+}
+
+
+
+@media only screen and (min-width:501px) and (max-width:700px){
+    main>h1{
+        font-size: 6rem;
+    }
+    .project{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+     
+    }
+    .project>h1{
+
+        text-align: center;
+        margin: 20px 0px;
+    }
+    .project>.bg1{
+
+        width: 100%;
+    
+    }
+    .project>.bg2{
+
+
+        width: 15%;
+        border-radius: 50%;
+        left: 40%;
+        top:25%
+    
+    }
+    .project>a{
+        margin-top: 1rem;
+        padding: 6px 15px;
+        border: 1px solid rgba(254, 211, 48,1.0);
+        color: rgba(254, 211, 48,1.0);
+    }
+    .project>.desc{
+
+        text-align: justify;
+        margin: 10px 0px 20px 0px;
+        padding: 25px;
+    }
+    .project>h4{
+        padding: 10px;
+        text-align: center;
+    
+        
+    }
+    .comment-section{
+        margin: 0.5rem;
+    }
+    .comment{
+        background-color: #f5f6fa;
+        line-height: 1.5rem;
+        padding:10px;
+        margin: 1rem 0rem;
+    }
+    .comment>.users{
+        text-decoration: underline
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    form>.comm{
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+    } 
+}
+
+@media only screen and (min-width:701px) and (max-width:1000px){
+    main>h1{
+        font-size: 6rem;
+    }
+    .project{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 2rem;
+     
+    }
+    .project>h1{
+
+        text-align: center;
+        margin: 20px 0px;
+    }
+    .project>.bg1{
+
+        width: 100%;
+    
+    }
+    .project>.bg2{
+
+
+        width: 15%;
+        border-radius: 50%;
+        left: 40%;
+        top:25%
+    
+    }
+    .project>a{
+        margin-top: 1rem;
+        padding: 6px 15px;
+        border: 1px solid rgba(254, 211, 48,1.0);
+        color: rgba(254, 211, 48,1.0);
+    }
+    .project>.desc{
+
+        text-align: justify;
+        margin: 10px 0px 20px 0px;
+        padding: 35px;
+    }
+    .project>h4{
+        padding: 10px;
+        text-align: center;
+    
+        
+    }
+    .comment-section{
+        margin: 0.5rem;
+    }
+    .comment{
+        background-color: #f5f6fa;
+        line-height: 1.5rem;
+        padding:10px;
+        margin: 1rem 0rem;
+    }
+    .comment>.users{
+        text-decoration: underline
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    form>.comm{
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+    } 
+}
+
+
+@media only screen and (min-width:1001px) and (max-width:1200px){
+    
+    main>h1{
+        font-size: 6rem;
+    }
+    .project{
+        place-items: center;
+        display: grid;
+        grid-template-columns: 30px 1fr 1fr 30px;
+        margin: 3rem;
+     
+    }
+    .project>h1{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        text-align: center;
+        margin: 16px 0px;
+    }
+    .project>.bg1{
+       
+        grid-column: 2/4;
+        width: 100%;
+    
+    }
+    .project>.bg2{
+        margin:1rem 20rem 0rem 0rem; 
+        grid-column: 2/4;
+        grid-row: 2/3;
+        width: 8%;
+        border-radius: 50%;
+    
+    }
+    .project>a{
+        grid-column: 2/4;
+        width:20%;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 6px 15px;
+        border: 1px solid rgba(254, 211, 48,1.0);
+        color: rgba(254, 211, 48,1.0);
+    }
+    .project>.desc{
+        grid-column: 2/4;
+        text-align: justify;
+        margin: 10px 0px 20px 0px;
+        padding: 15px;
+    }
+    .project>h4{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        padding: 10px;
+        text-align: center;
+        font-size: 15px;
+        opacity: 0.6;
+        margin-top: 4rem;
+    
+        
+    }
+    .comment-section{
+        margin: 0.5rem;
+    }
+    .comment{
+        background-color: #f5f6fa;
+        line-height: 1.5rem;
+        padding:10px;
+        margin: 1rem 0rem;
+    }
+    .comment>.users{
+        text-decoration: underline
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    form>.comm{
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+    } 
+}
+
+
+
+@media only screen and (min-width:1201px){
+    
+    main>h1{
+        font-size: 6rem;
+    }
+    .project{
+        place-items: center;
+        display: grid;
+        grid-template-columns: 10px 1fr 1fr 10px;
+        margin: 3rem;
+        padding: 1rem 0rem;
+        background: none;
+     
+    }
+    .project>h1{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        text-align: center;
+        margin: 16px 0px;
+        font-size: 25px;
+    }
+    .project>.bg1{
+       
+        grid-column: 2/4;
+        width: 60%;
+    
+    }
+    .project>.bg2{
+        margin:1rem 20rem 0rem 0rem; 
+        grid-column: 2/4;
+        grid-row: 2/3;
+        width: 6%;
+        border-radius: 50%;
+    
+    }
+    .project>a{
+        grid-column: 2/4;
+        width:20%;
+        text-align: center;
+        margin: 1rem 0rem;
+        padding: 6px 15px;
+        border: 1px solid rgba(254, 211, 48,1.0);
+        color: rgba(254, 211, 48,1.0);
+    }
+    .project>.desc{
+        grid-column: 2/4;
+        text-align: justify;
+        width: 60%;
+        /* background-color: #f5f6fa; */
+        padding: 20px;
+        -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
+
+    }
+    .project>h4{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        padding: 10px;
+        text-align: center;
+        font-size: 15px;
+        opacity: 0.6;
+        margin-top: 4rem;
+    
+        
+    }
+    .comment-section{
+        margin: 0.5rem 20rem;
+    }
+    .comment{
+        background-color: #f5f6fa;
+        line-height: 1.5rem;
+        padding:10px;
+        margin: 1rem 0rem;
+    }
+    .comment>.users{
+        text-decoration: underline
+    }
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    form>.comm{
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+    } 
+}

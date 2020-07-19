@@ -1,11 +1,13 @@
+{% load social_share %}
 {% load static %}
-
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '/css/theproject.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,31 +18,66 @@
         <h1>{{posts.title}}</h1>
     </main>
 
-    <h1>{{posts.title}}</h1>
-    <img src="{{posts.img.url}}" alt="" width=600>
+
+    <div class="main-project">
+
+    <div class="project">
+
+        <img class="bg1" src="{{posts.img.url}}" alt="" width=600>
+ 
+        <h1>{{posts.title}}</h1>
+        <img title="Author" class="bg2" src="{{posts.author.profile_pic.url}}" alt="" width=600>
+        {% for cat in posts.category.all %}
+        <a href="">{{cat}}</a>
+        {% endfor %}
+ 
+        <p class="desc">{{posts.desc}}</p>
+        <h4 class="ago"><i class="fa fa-calendar"></i> {{posts.date_created|timesince}} ago</h4>
+      
+    </div>
+
+    <div id="fb-root"></div>
+    <div class="fb-share-button" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+    <a class="twitter-share-button"
+    href="https://twitter.com/intent/tweet">
+    Tweet</a>
 
     <div class="comment-section">
     <h3>Comment{{comments.count|pluralize}} ({{comments.count}})</h3>
-    {% for c in comments%}
-
-    <p>{{c.user}}</p>
-    <p>{{c.body}}</p>
-    <p>{{c.comment_date|timesince}} ago</p>
-
-    {% endfor %}
     
+    {% for c in comments%}
+    <div class="comment">
+ 
+
+    <p class="users">By: {{c.user}}</p>
+    <p class="com"><i class="fa fa-bullhorn"></i> {{c.body}}</p>
+    <p class="time">{{c.comment_date|timesince}} ago</p>
+
+ 
+    </div>
+    {% endfor %}
+
+    <div class="f-comment">
+
     {% if request.user.is_authenticated %}
     <form action="" method="POST">
         {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit" class="btn btn-primary">Comment</button>
+        {% render_field form.body class="comm" placeholder="Your Comment Here"  %}
+        <button type="submit" id="submit" class="btn btn-primary">Comment</button>
     </form>
-
     {% endif %}
+
     </div>
 
+    </div>
+
+    </div>
+    
+   
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="GbQy9Wxv"></script>
+    <script src="{% static '/js/theproject.js' %}"></script>
+
     {% include 'blogapp/footer.html' %}
-
 </body>
-
 </html>
