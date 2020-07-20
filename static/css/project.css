@@ -70,7 +70,7 @@ h2{
 }
 
 main{
-    background-image: url("/static/images/background17.jpg");
+    background-image: linear-gradient(rgba(47, 54, 64,0.3),rgba(47, 54, 64,0.3)),url("/static/images/background17.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

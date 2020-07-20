@@ -9,7 +9,7 @@
 }
 
 main{
-    background-image: url("/static/images/background18.jpg");
+    background-image:linear-gradient(rgba(47, 54, 64,0.3),rgba(47, 54, 64,0.3)), url("/static/images/background18.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,6 +35,9 @@ main>h1{
 }
 .project{
     background-color: #f5f6fa;
+}
+.project>p{
+    line-height: 2rem;
 }
 
 .comment-section>h3{

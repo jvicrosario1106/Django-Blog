@@ -71,10 +71,10 @@ form{
     flex-direction: column;
     min-height: 200px;
     width: 100%;
-    padding: 0rem 2.5rem;
+    padding: 0rem 1rem;
     line-height: 2.5rem;
     font-family: 'Raleway', sans-serif;
-
+    
     
 }
 form>label{
@@ -120,4 +120,29 @@ form>button:hover{
     background-color: rgba(254, 211, 48,0.9);
  
 
+}
+
+
+@media only screen and (max-width:850px){
+    form>input{
+        width: 80%;
+    }
+    form>textarea{
+        width: 80%;
+    }
+    .text-info{
+        font-family: 'Raleway', sans-serif;
+        width: 56%;
+        display: flex;
+        margin-top: 3rem;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 2rem;
+        min-height: 200px;  
+        width: 60%;
+    }
+    .photo>h3{
+        font-size: 6rem;
+    }
 }
