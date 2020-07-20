@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/contact.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'blogapp/nav.html' %}
+    <div class="main">
+        <div class="photo">
+            <h3>Contact</h3>
+        </div>
+
+        <div class="text-info">
+            <h3>I'm looking forward to hearing from you.</h3>
+            <p>Please feel free to contact me directly, or use the form below for your convenience.</p>
+            <p class="directly">Email me directly at 
+                <span>jvrosario1106@gmail.com</span>
+            </p>
+            <p>You can also message me on my Social Media Accounts below</p>
+            <p>Emails will be responded to in most cases within the same day and usually within an hour or two.</p>
+        </div>
+
+        <div class="contact">
+            <form action="" method="POST">
+
+                <label for="youremail">Email</label>
+                <input name="youremail"type="text" placeholder="Your Email">
+
+                <label for="">Subject</label>
+                <input type="text" placeholder="Subject">
+
+                <label for="">Message</label>
+                <textarea name="" placeholder="Your Message"></textarea>
+
+                <button type="submit"><i class="fa fa-check"></i> Send Message</button>
+            </form>
+        </div>
+    </div>
+    {% include 'blogapp/footer.html' %}
+</body>
+</html>

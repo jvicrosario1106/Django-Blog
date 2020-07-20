@@ -21,7 +21,7 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'projects' %}">Posts</a></li>
                 <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
                
                 {% if request.user.is_staff %}
                 <li><a href="">Add Post</a></li>

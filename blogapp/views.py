@@ -26,7 +26,7 @@ def home(request):
             messages.success(request," Thank You. You've Successfully Subcribe & You will be updated ❤")
 
         else:
-            messages.info(request,"Gmail already exists or Try Another Gmail Accounts.😁")
+            messages.info(request,"Gmail already exists try Another Gmail Accounts.😁")
     else:
          form = NewsletterForm()
          
@@ -118,7 +118,8 @@ def remove_comment(request,pk):
     messages.info(request,"You've successfully deleted your comment")
     return redirect('the_project', pk=comment.post.id)
 
-
+def contact(request):
+    return render(request,'blogapp/contact.html')
 
 
 

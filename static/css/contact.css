@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main>.photo{
+    background-image:linear-gradient(rgba(47, 54, 64,0.3),rgba(47, 54, 64,0.3)), url("/static/images/background19.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+    width: 100%;
+}
+
+.photo>h3{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-decoration: underline;
+    font-family: 'Lobster', cursive;
+    font-size: 9rem;
+    
+}
+
+.text-info{
+    font-family: 'Raleway', sans-serif;
+    width: 56%;
+    display: flex;
+    margin-top: 3rem;
+
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 2rem;
+    min-height: 200px;    
+}
+.text-info>h3{
+    font-weight: 600;
+
+}
+
+.text-info>.directly>span{
+    color: rgba(254, 211, 48,1.0);
+    font-weight: 600;
+}
+
+.contact{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 200px;
+    width: 100%;
+    padding: 0rem 2.5rem;
+    line-height: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+
+    
+}
+form>label{
+    font-weight: 700;
+    align-items: flex-start;
+}
+form>input{
+    width: 60%;
+    font-size: 16px;
+    padding: 10px;
+    resize: vertical;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    border:1px solid rgba(178, 190, 195,1.0)
+    
+}
+
+form>button{
+    margin-top: 3rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+form>textarea{
+    font-size: 16px;
+    padding: 10px;
+    width: 60%;
+    height: 230px;
+    font-family: 'Raleway', sans-serif;
+    resize: none;
+    border-radius: 5px;
+}
+form>button{
+    font-size: 16px;
+    padding:10px;
+    background-color: rgba(254, 211, 48,1.0);
+    border: 1px solid rgba(254, 211, 48,1.0);
+    cursor: pointer;
+    margin: 1rem 0rem 2rem 0rem;
+
+}
+form>button:hover{
+    border: 1px solid rgba(254, 211, 48,0.9);
+    background-color: rgba(254, 211, 48,0.9);
+ 
+
+}
