@@ -13,7 +13,7 @@ urlpatterns = [
     path('the_project/<str:pk>/', views.the_project, name="the_project"),
 
 
-
+    path('remove_comment/<str:pk>/', views.remove_comment, name="remove-comment"),
 
     path('addpost/', views.addpost, name="addpost"),
     path('addcat/', views.addcat, name="addcat"),

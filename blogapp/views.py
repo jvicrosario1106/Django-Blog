@@ -1,5 +1,5 @@
-from django.shortcuts import render,redirect
-from .models import Post,Category
+from django.shortcuts import render,redirect,get_object_or_404
+from .models import Post,Category,Comment
 from .forms import PostForm,CategoryForm,AuthorForm,UserForm,CommentForm,NewsletterForm
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
@@ -8,9 +8,9 @@ from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.db.models import Q, Count
 from django.contrib.auth.models import User,Group
 from django.contrib import messages
-
-
-
+from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy,reverse
+from hashid_field import Hashid
 # Create your views here.
 
 
@@ -114,6 +114,28 @@ def the_project(request,pk):
     }
 
     return render(request, 'blogapp/theproject.html', content)
+
+
+def remove_comment(request,pk):
+    comment = Comment.objects.get(id=pk)
+    comment.delete()
+    messages.info(request,"You've successfully deleted your comment")
+    return redirect('the_project', pk=comment.post.id)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # THIS SECTION IS FOR AUTHENTICATION

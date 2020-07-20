@@ -59,6 +59,30 @@ form>.comm{
     resize: none;
     width: 100%;
 } 
+
+.comment>.rm{
+    background-color: #e74c3c;
+    color: white;
+    padding: 3px;
+    font-size: 13px;
+}
+.msg-content{
+    position: relative;
+    width: 100%;
+    background-color: rgba(254, 211, 48,1.0);
+    min-height: 50px;
+
+}
+
+.msg-content>p{
+    position: absolute;
+    left:37%;
+    top:30%;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+}
+
 @media only screen and (max-width:275px){
     main>h1{
         font-size: 4rem;

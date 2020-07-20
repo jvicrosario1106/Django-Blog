@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '/css/theproject.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,6 +16,12 @@
 
 
     <main>
+        {% for m in messages %}
+        <div class='msg-content'>
+            <p>{{m}}</p>
+        </div>
+        {% endfor %}
+      
         <h1>{{posts.title}}</h1>
     </main>
 
@@ -26,7 +33,7 @@
         <img class="bg1" src="{{posts.img.url}}" alt="" width=600>
  
         <h1>{{posts.title}}</h1>
-        <img title="Author" class="bg2" src="{{posts.author.profile_pic.url}}" alt="" width=600>
+        <img class="bg2" src="{{posts.author.profile_pic.url}}" alt="Author" title={{posts.author}} width=600>
         {% for cat in posts.category.all %}
         <a href="">{{cat}}</a>
         {% endfor %}
@@ -38,7 +45,7 @@
 
     <div id="fb-root"></div>
     <div class="fb-share-button" data-href="{{ request.build_absolute_uri }}" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-
+    <!-- "{{ request.build_absolute_uri }}" -->
     <a class="twitter-share-button"
     href="https://twitter.com/intent/tweet">
     Tweet</a>
@@ -50,10 +57,13 @@
     <div class="comment">
  
 
-    <p class="users">By: {{c.user}}</p>
-    <p class="com"><i class="fa fa-bullhorn"></i> {{c.body}}</p>
-    <p class="time">{{c.comment_date|timesince}} ago</p>
+        <p class="users">By: {{c.user}}</p>
+        <p class="com"><i class="fa fa-bullhorn"></i> {{c.body}}</p>
+        <p class="time">{{c.comment_date|timesince}} ago</p>
 
+        {% if request.user == c.user %}
+            <a href="{% url 'remove-comment' c.id %}" class="rm"><i class="fa fa-trash"></i> Remove</a>
+        {% endif %}
  
     </div>
     {% endfor %}

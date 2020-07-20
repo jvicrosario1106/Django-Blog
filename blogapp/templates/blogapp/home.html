@@ -71,7 +71,7 @@
     <div class="second-content">
     <h1>{{posts.title}}</h1>
     <p>{{posts.desc|truncatewords:"25"}}</p>
-    <a href="#" class='btn btn-success rm'>Read more</a>
+    <a href="{% url 'the_project' posts.id %}" class='btn btn-success rm'>Read more</a>
     {% if request.user.is_staff %}
     <a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
     <a href="{% url 'deletepost' posts.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
