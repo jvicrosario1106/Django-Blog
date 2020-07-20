@@ -8,15 +8,14 @@ from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.db.models import Q, Count
 from django.contrib.auth.models import User,Group
 from django.contrib import messages
-from django.http import HttpResponseRedirect
-from django.urls import reverse_lazy,reverse
-from hashid_field import Hashid
+
+
 # Create your views here.
 
 
 # @login_required(login_url = "login_user")
 def home(request):
-     
+
     post = Post.objects.order_by("-date_created")[0:6]
     if request.method == "POST":
         form = NewsletterForm(request.POST)
@@ -61,8 +60,6 @@ def get_cat_num(request):
 
 def catresult(request,cats):
     post_cat = Post.objects.filter(category=cats)
-    print(post_cat)
-
     content ={
         "post_cat":post_cat
     }
@@ -72,7 +69,6 @@ def catresult(request,cats):
 
 def projects(request):
     cat_num1 = get_cat_num(request)
-    print(cat_num1)
     three_recent_posts = Post.objects.order_by("-date_created")[0:3]
     post = Post.objects.order_by("-date_created")
     paginator = Paginator(post,4)

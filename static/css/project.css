@@ -80,7 +80,6 @@ main{
 
 main>h1{
     position: absolute;
-    font-size: 10rem;
     text-align: center;
     top:50%;
     left: 50%;
@@ -93,7 +92,9 @@ main>h1{
 
 
 @media only screen and (max-width:260px){
-
+    main>h1{
+        font-size: 5rem;
+    }
 form>input[type="text"]{
     margin-left: 7px;
     padding:5px 7px;
@@ -182,6 +183,9 @@ h2{
 
 
 @media only screen and (min-width:261px) and (max-width:300px){
+    main>h1{
+        font-size: 5rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -274,6 +278,9 @@ h2{
 }
 
 @media only screen and (min-width:301px) and (max-width:400px){
+    main>h1{
+        font-size: 5rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -370,6 +377,9 @@ h2{
 
 
 @media only screen and (min-width:401px) and (max-width:500px){
+    main>h1{
+        font-size: 6rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -464,6 +474,9 @@ h2{
 
 
 @media only screen and (min-width:501px) and (max-width:550px){
+    main>h1{
+        font-size: 7rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -564,6 +577,9 @@ h2{
 
 
 @media only screen and (min-width:551px) and (max-width:600px){
+    main>h1{
+        font-size: 7rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -663,6 +679,9 @@ h2{
 
 
 @media only screen and (min-width:601px) and (max-width:660px){
+    main>h1{
+        font-size: 8rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -762,6 +781,9 @@ h2{
 
 
 @media only screen and (min-width:661px) and (max-width:750px){
+    main>h1{
+        font-size: 8rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -860,6 +882,9 @@ h2{
 }
 
 @media only screen and (min-width:751px) and (max-width:810px){
+    main>h1{
+        font-size: 8rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -961,10 +986,9 @@ h2{
 
 
 @media only screen and (min-width:811px) and (max-width:1100px){
-    /* .main-content{
-        display: grid;
-        place-items: center;
-    } */
+    main>h1{
+        font-size: 8rem;
+    }
     form{
         margin:1rem 0rem 1rem 1rem ;
     }
@@ -1069,7 +1093,10 @@ h2{
 }
 
 
-@media only screen and (min-width:1101px) and (max-width:1800px){
+@media only screen and (min-width:1101px){
+    main>h1{
+        font-size: 9rem;
+    }
     .main-content{
         margin-top: 3rem;
         display: grid;
