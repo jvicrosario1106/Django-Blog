@@ -1,14 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/allow.css' %}">
     <title>Document</title>
 </head>
 <body>
     
 
-    <h1>Sorry Your Not Allowed In this Page 😂😂😂</h1>
+    <div class="not-allow">
+        <div class="img">
+            <img src="/static/images/background22.jpg" alt="">
+        </div>
+        <h3>Your not allow in this page</h3>
+    </div>
 
 </body>
 </html>

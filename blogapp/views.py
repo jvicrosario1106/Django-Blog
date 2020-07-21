@@ -122,6 +122,10 @@ def remove_comment(request,pk):
     messages.info(request,"You've successfully deleted your comment")
     return redirect('the_project', pk=comment.post.id)
 
+
+def about(request):
+    return render(request,'blogapp/about.html')
+
 def contact(request):
     return render(request,'blogapp/contact.html')
 

@@ -27,6 +27,7 @@ urlpatterns = [
     path('updatepost/<str:pk>/', views.updatepost, name="updatepost"),
     path('deletepost/<str:pk>/', views.deletepost, name="deletepost"),
 
+    path('about/',views.about, name="about"),
     path('contact/', views.contact, name="contact"),
 
 

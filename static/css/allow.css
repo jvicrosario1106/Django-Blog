@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@100;300;400&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.not-allow{
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+.img{
+    width: 600px;
+}
+
+.img>img{
+    width: 100%;
+}
+
+.not-allow>h3{
+    font-size: 2.5rem;
+    font-family: "Raleway","san-serif";
+}

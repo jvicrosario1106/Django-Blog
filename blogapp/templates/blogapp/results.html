@@ -1,22 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/results.css' %}">
     <title>Document</title>
 </head>
 <body>
     {% include 'blogapp/nav.html' %}
-    {% if posts %}
-    {% for posts in post %}
+    
+    {% if post %}
 
-    <h1>{{posts.title}}</h1>
+        {% for posts in post %}
 
-    {% endfor %}
+        <h1>{{posts.title}}</h1>
+
+        {% endfor %}
+
     {% else %}
 
-    <h1>Sorry Not Found</h1>
+        <div class="not-found">
+            <div class='nf'>
+            <img src="/static/images/background21.png" alt="">
+            </div>
+            <h3>Results Not Found...</h3>
+        </div>
     
     {% endif %}
+
+    {% include 'blogapp/footer.html' %}
 </body>
 </html>

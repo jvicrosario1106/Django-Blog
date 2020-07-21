@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/about.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'blogapp/nav.html' %}
+    <div class="main">
+        <h3>About</h3>
+    </div>
+
+    <div class="about">
+
+        <div class="img">
+
+           
+        <img src="/static/images/background20.png" alt="">
+
+        </div>
+
+
+        <div class="text">
+            <h3>What is all about?</h3>
+            <p>First of all, Thank you for your time in visiting my website. This website is about sharing ideas, knowledge and </p>
+            
+            <p>A clean layout and simple design appeals more to users. This “about us” page is dominated 
+                grey tones, it clearly shows us the company's brand story, value, and real data support. 
+                Furthermore, the blue CTA stands out as you scroll down the page.</p>
+        </div>
+
+    </div>
+
+
+    {% include 'blogapp/footer.html' %}
+</body>
+</html>
