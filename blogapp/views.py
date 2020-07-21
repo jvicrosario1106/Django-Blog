@@ -1,14 +1,18 @@
 from django.shortcuts import render,redirect,get_object_or_404
+
 from .models import Post,Category,Comment
-from .forms import PostForm,CategoryForm,AuthorForm,UserForm,CommentForm,NewsletterForm
-from django.contrib.auth import login,logout,authenticate
+
+from .forms import PostForm,CategoryForm,AuthorForm,UserForm,CommentForm,NewsletterForm,ChangeForm
+
+from django.contrib.auth import login,logout,authenticate,update_session_auth_hash
+
 from django.contrib.auth.decorators import login_required
 from .decorators import isauthentication,allowed
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 from django.db.models import Q, Count
 from django.contrib.auth.models import User,Group
 from django.contrib import messages
-
+from django.contrib.auth.views import PasswordChangeForm
 
 # Create your views here.
 
@@ -122,15 +126,43 @@ def contact(request):
     return render(request,'blogapp/contact.html')
 
 
+def change_password(request):
+    if request.method == "POST":
+        form = PasswordChangeForm(data=request.POST, user=request.user)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            messages.info(request, "You've Successfully Change your password")
+            return redirect("change-password")
+        else:
+              messages.info(request, "Failed to change password. Try Again")
+            
+    else:
+        form = PasswordChangeForm(user=request.user)
+
+    content = {
+        "form":form
+    }
+    return render(request,'blogapp/change_password.html',content)
 
 
+def edit_profile(request):
+    if request.method == "POST":
+        form = ChangeForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+            messages.info(request, "You've Successfully Change your profile")
+            return redirect("edit_profile")
+        else:
+             messages.info(request, "Failed to change profile. Try Again")
 
+    else:
+        form = ChangeForm(instance=request.user)
 
-
-
-
-
-
+    content = {
+        "form":form
+    }
+    return render(request,'blogapp/change_profile.html',content)
 
 
 

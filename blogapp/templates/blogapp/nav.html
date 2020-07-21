@@ -29,7 +29,7 @@
                 <li><a href="">Add Author</a></li>
                 {% endif %}
                 {% if request.user.is_authenticated %}
-                <li><a href="" class="user">Hi! {{request.user}}</a></li>
+                <li><a href="{% url 'edit-profile' %}" class="user">Hi! {{request.user}}</a></li>
                 <li><a href="{% url 'logout_user' %}" class="logout">Logout</a></li>
                 
                 {% else %}
