@@ -156,7 +156,7 @@ def edit_profile(request):
         if form.is_valid():
             form.save()
             messages.info(request, "You've Successfully Change your profile")
-            return redirect("edit_profile")
+            return redirect("edit-profile")
         else:
              messages.info(request, "Failed to change profile. Try Again")
 

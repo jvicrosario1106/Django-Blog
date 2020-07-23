@@ -61,7 +61,7 @@
         <p class="com"><i class="fa fa-bullhorn"></i> {{c.body}}</p>
         <p class="time">{{c.comment_date|timesince}} ago</p>
 
-        {% if request.user == c.user %}
+        {% if request.user == c.user or request.user.is_staff %}
             <a href="{% url 'remove-comment' c.id %}" class="rm"><i class="fa fa-trash"></i> Remove</a>
         {% endif %}
  
