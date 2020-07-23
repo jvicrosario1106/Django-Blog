@@ -70,7 +70,7 @@
 
     <div class="second-content">
     <h1>{{posts.title}}</h1>
-    <p>{{posts.desc|truncatewords:"25"}}</p>
+    <p>{{posts.desc|truncatewords:"23"|safe}}</p>
     <a href="{% url 'the_project' posts.id %}" class='btn btn-success rm'>Read more</a>
     {% if request.user.is_staff %}
     <a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>

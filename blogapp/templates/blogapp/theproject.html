@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static '/css/theproject.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=ruby&amp;skin=sunburst"></script>
     <title>{{posts.title}} | JV Blog</title>
 </head>
 <body>
@@ -37,8 +38,9 @@
         {% for cat in posts.category.all %}
         <a href="">{{cat}}</a>
         {% endfor %}
- 
-        <p class="desc">{{posts.desc}}</p>
+   
+        <p class="desc">{{posts.desc|safe}}</p>
+
         <h4 class="ago"><i class="fa fa-calendar"></i> {{posts.date_created|timesince}} ago</h4>
       
     </div>

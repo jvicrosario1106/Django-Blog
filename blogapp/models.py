@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import ValidationError
 from hashid_field import HashidAutoField
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 def email_validate(value):
@@ -36,7 +37,7 @@ class Post(models.Model):
     id = HashidAutoField(primary_key=True)
     title = models.CharField(max_length = 200)
     img = models.ImageField()
-    desc = models.TextField()
+    desc = RichTextField(blank=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     category = models.ManyToManyField(Category)
     date_created = models.DateTimeField(auto_now_add=True)

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'widget_tweaks',
     'crispy_forms',
-    'django_social_share'
+    'django_social_share',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [

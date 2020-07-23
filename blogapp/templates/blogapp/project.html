@@ -32,7 +32,7 @@
                     <a class="category" href="{% url 'catresult' cat.id %}">{{cat}}</a>
                 {% endfor %}
 
-            <p>{{post.desc|truncatewords:"30"}}</p>
+            <p>{{post.desc|truncatewords:"30"|safe}}</p>
             <a  class="read-more" href="{% url 'the_project' post.id %}" class="btn btn-success">Read more</a>
             
             {% if request.user.is_staff %}

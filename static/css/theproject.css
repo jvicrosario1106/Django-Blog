@@ -416,11 +416,11 @@ form>.comm{
         border: 1px solid rgba(254, 211, 48,1.0);
         color: rgba(254, 211, 48,1.0);
     }
-    .project>.desc{
-
+    .project>p{
+       
         text-align: justify;
         margin: 10px 0px 20px 0px;
-        padding: 35px;
+        padding: 0px 35px;
     }
     .project>h4{
         padding: 10px;
@@ -495,7 +495,7 @@ form>.comm{
         border: 1px solid rgba(254, 211, 48,1.0);
         color: rgba(254, 211, 48,1.0);
     }
-    .project>.desc{
+    .project>p{
         grid-column: 2/4;
         text-align: justify;
         margin: 10px 0px 20px 0px;
@@ -583,16 +583,16 @@ form>.comm{
         border: 1px solid rgba(254, 211, 48,1.0);
         color: rgba(254, 211, 48,1.0);
     }
-    .project>.desc{
-        grid-column: 2/4;
+    .project>p{
+        grid-column: 2/4; 
         text-align: justify;
-        width: 60%;
-        /* background-color: #f5f6fa; */
+        width: 70%;
         padding: 20px;
-        -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
-        box-shadow: 0px 0px 5px -1px rgba(0,0,0,0.75);
 
+    }
+    .project>.prettyprint{
+        grid-column: 2/4;
+        width: 75%;
     }
     .project>h4{
         grid-column: 2/4;
