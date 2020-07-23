@@ -592,7 +592,7 @@ form>.comm{
     }
     .project>.prettyprint{
         grid-column: 2/4;
-        width: 75%;
+        width: 65%;
     }
     .project>h4{
         grid-column: 2/4;
