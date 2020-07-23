@@ -104,7 +104,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CKEDITOR_CONFIGS = {
+    'default': {
+        "extraAllowedContent": 'pre(prettyprint)',
+    },
+    
+}
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
