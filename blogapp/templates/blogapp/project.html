@@ -81,7 +81,7 @@
                     {% for recent in three_recent_posts%}
                         <img src="{{recent.img.url}}" alt="" width="100">
                         <span><a href="{% url 'the_project' recent.id %}">{{recent.title}}</a></span>
-                        <p>{{recent.desc|truncatewords:"15"}}</p>
+                        <p>{{recent.desc|truncatewords:"15"|safe}}</p>
                         
                     {% endfor %}
                 </div>

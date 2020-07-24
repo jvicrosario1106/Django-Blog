@@ -1,10 +1,10 @@
-{% load crispy_forms_tags %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/addpost.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -13,8 +13,23 @@
     <form action="" method="POST" enctype="multipart/form-data" class="m-5">
         {% csrf_token %}
         {{form.media}}
-        {{form|crispy}}
+        {{form}}
         <button class="btn btn-primary">Create</button>
     </form>
+
+
+  
+    {% for posts in post %}
+
+    <div class="all-post">
+
+    <h1>{{posts.title}}</h1>
+    <a  class="read-more" href="{% url 'the_project' posts.id %}" class="btn btn-success">Read more</a>
+    <a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
+    <a href="{% url 'deletepost' posts.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
+    
+    </div>
+    {% endfor %}
+
 </body>
 </html>

@@ -19,8 +19,8 @@ from django.contrib.auth.views import PasswordChangeForm
 
 # @login_required(login_url = "login_user")
 def home(request):
-
-    post = Post.objects.order_by("-date_created")[0:6]
+    post_completed = Post.objects.filter(completed=True)
+    post = post_completed.order_by("-date_created")[0:6]
     if request.method == "POST":
         form = NewsletterForm(request.POST)
         if form.is_valid():
@@ -45,7 +45,7 @@ def home(request):
     return render(request, "blogapp/home.html",content)
 
 def results(request):
-    post = Post.objects.all()
+    post = Post.objects.filter(completed=True)
     query = request.GET.get('q')
 
     if query:
@@ -59,8 +59,9 @@ def results(request):
 
 
 def get_cat_num(request):
-     cat_num  = Post.objects.values("category__cat_name").annotate(Count("category"))
-     return cat_num
+    post_completed = Post.objects.filter(completed=True)
+    cat_num  = post_completed.values("category__cat_name").annotate(Count("category"))
+    return cat_num
 
 def catresult(request,cats):
     post_cat = Post.objects.filter(category=cats)
@@ -73,8 +74,9 @@ def catresult(request,cats):
 
 def projects(request):
     cat_num1 = get_cat_num(request)
-    three_recent_posts = Post.objects.order_by("-date_created")[0:3]
-    post = Post.objects.order_by("-date_created")
+    post_completed = Post.objects.filter(completed=True)
+    three_recent_posts = post_completed.order_by("-date_created")[0:3]
+    post = post_completed.order_by("-date_created")
     paginator = Paginator(post,4)
     page = request.GET.get('page')
 
@@ -86,6 +88,7 @@ def projects(request):
     
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
+
     content = {
         "posts":posts,
         "cat_num1":cat_num1,
@@ -225,15 +228,17 @@ def register(request):
 @login_required(login_url = "login_user")
 @allowed(allowed_roles=["admin"])
 def addpost(request):
+    post = Post.objects.all()
     form = PostForm()
     if request.method == "POST":
         form = PostForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-            return redirect("home")
+            return redirect("addpost")
 
     content = {
-        "form":form
+        "form":form,
+        "post":post
     }
 
     return render(request, 'blogapp/addpost.html',content)
@@ -274,7 +279,7 @@ def addauthor(request):
         form = AuthorForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("home")
+            return redirect("addauthor")
 
     content = {
         "form":form
@@ -292,7 +297,7 @@ def updatepost(request,pk):
         form  = PostForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
-            return redirect("home")
+            return redirect("updatepost", pk=post.id)
 
     content = {
         "form":form
@@ -305,5 +310,5 @@ def updatepost(request,pk):
 def deletepost(request,pk):
     post = Post.objects.get(id=pk)
     post.delete()
-    return redirect("home")
+    return redirect("deletepost")
 #--------------------------------------------------------

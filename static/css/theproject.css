@@ -501,6 +501,10 @@ form>.comm{
         margin: 10px 0px 20px 0px;
         padding: 15px;
     }
+    .project>h2{
+        grid-column: 2/4;
+        
+    }
     .project>h4{
         grid-column: 2/4;
         grid-row: 2/3;
@@ -560,6 +564,7 @@ form>.comm{
         margin: 16px 0px;
         font-size: 25px;
     }
+
     .project>.bg1{
        
         grid-column: 2/4;
@@ -586,9 +591,14 @@ form>.comm{
     .project>p{
         grid-column: 2/4; 
         text-align: justify;
-        width: 70%;
+        width: 73%;
         padding: 20px;
 
+    }
+    .project>h2{
+        grid-column: 2/4;
+
+        
     }
     .project>.prettyprint{
         grid-column: 2/4;

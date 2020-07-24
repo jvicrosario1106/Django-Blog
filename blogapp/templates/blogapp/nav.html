@@ -24,9 +24,9 @@
                 <li><a href="{% url 'contact' %}">Contact</a></li>
                
                 {% if request.user.is_staff %}
-                <li><a href="">Add Post</a></li>
-                <li><a href="">Add Category</a></li>
-                <li><a href="">Add Author</a></li>
+                <li><a href="{% url 'addpost' %}">Add Post</a></li>
+                <li><a href="{% url 'addcat' %}">Add Category</a></li>
+                <li><a href="{% url 'addauthor' %}">Add Author</a></li>
                 {% endif %}
                 {% if request.user.is_authenticated %}
                 <li><a href="{% url 'edit-profile' %}" class="user">Hi! {{request.user}}</a></li>

@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 class PostForm(ModelForm):
     class Meta:
         model = Post
-        fields = ["title", "desc", "img", "author", "category"]
+        fields = ["title", "desc", "img", "author", "category","completed"]
 
 class CategoryForm(ModelForm):
     class Meta:
