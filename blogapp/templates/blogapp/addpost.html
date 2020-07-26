@@ -17,19 +17,26 @@
         <button class="btn btn-primary">Create</button>
     </form>
 
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Read More</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
 
+        <tbody>
+            {% for posts in post %}
+            <tr>
+                <td>{{posts.title}}</td>
+                <td><a  class="read-more" href="{% url 'the_project' posts.id %}">Read more</a></td>
+                <td><a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a></td>
+                <td><a href="{% url 'deletepost' posts.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
   
-    {% for posts in post %}
-
-    <div class="all-post">
-
-    <h1>{{posts.title}}</h1>
-    <a  class="read-more" href="{% url 'the_project' posts.id %}" class="btn btn-success">Read more</a>
-    <a href="{% url 'updatepost' posts.id %}" class = "btn btn-info m-3-0-3-3  btn-sm">Update Post</a>
-    <a href="{% url 'deletepost' posts.id %}" class = "btn btn-danger m-3-0-3-0  btn-sm">Delete Post</a>
-    
-    </div>
-    {% endfor %}
 
 </body>
 </html>

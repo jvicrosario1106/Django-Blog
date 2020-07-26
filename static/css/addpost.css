@@ -6,14 +6,27 @@
 
 form{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    height: 900px;
+    /* background-color: red; */
 }
 form>input{
     width: 50%;
     font-size: 1em;
     padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form>select{
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+form>label{
+    font-size: 1.5rem;
 }
 
 
@@ -24,4 +37,36 @@ form>input{
     flex-direction: column;
     background-color: #ccc;
     margin-bottom: 1rem;
+}
+
+
+table{
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin: 3rem auto;
+    width: 60%;
+    text-align: center;
+}
+
+
+tr,td,th{
+    border: 1px solid #000;
+    padding: 10px;
+}
+a{
+    color: #fff;
+    padding: 5px 10px;
+    
+}
+tr>td>a.read-more{
+    background-color: seagreen;
+
+}
+tr>td>a.btn-info{
+    background-color: seagreen;
+
+}
+tr>td>a.btn-danger{
+    background-color: seagreen;
+
 }
