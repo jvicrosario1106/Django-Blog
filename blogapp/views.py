@@ -188,7 +188,7 @@ def login_user(request):
             return redirect("home")
 
         else:
-            messages.error(request, "Wrong credentials. Please Try Again. You can exit me just click the 'x' in your right 😀")
+            messages.error(request, "Wrong credentials. Please Try Again 😄")
 
     return render(request, "blogapp/login.html")
 
@@ -310,5 +310,5 @@ def updatepost(request,pk):
 def deletepost(request,pk):
     post = Post.objects.get(id=pk)
     post.delete()
-    return redirect("deletepost")
+    return redirect("addpost")
 #--------------------------------------------------------
